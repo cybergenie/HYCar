@@ -1,0 +1,23 @@
+/* miniprogram/pages/main/main.wxss */
+.main-group{
+  display: flex;
+}
+.title-group{
+  height: 20rpx;
+  width: 750rpx;
+}
+.bannerImage-group{
+  height: 285rpx;
+  width: 750rpx;
+}
+
+.bannerImage{
+  height: 100%;
+  width: 100%;
+}
+.search-group{
+
+}
+.search{
+
+}

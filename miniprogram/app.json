@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/buy/buy",
+    "pages/sale/sale"
+  ],
+  "window": {
+    "navigationStyle": "default",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "万鑫名车",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#e20001",
+    "list":[
+      {
+        "pagePath":"pages/main/main",
+        "text":"首页",        
+        "iconPath":"images/main.png",
+        "selectedIconPath":"images/main_selected.png"
+      },
+      {
+        "pagePath":"pages/buy/buy",
+        "text":"买车",        
+        "iconPath":"images/buy.png",
+        "selectedIconPath":"images/buy_selected.png"
+      },
+      {
+        "pagePath":"pages/sale/sale",
+        "text":"卖车",        
+        "iconPath":"images/sale.png",
+        "selectedIconPath":"images/sale_selected.png"
+      }
+
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

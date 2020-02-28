@@ -1,0 +1,12 @@
+<!--miniprogram/pages/main/main.wxml-->
+<view class="main-group">
+	<view class="title-group">
+		<image class="title" src="./images/title.png" />
+	</view>
+	<view class="bannerImage-group">
+		<image class="bannerImage" src="./images/bannerImage.jpg" />
+	</view>
+	<view class="search-group">
+		<input class="search">sddf</input>
+	</view>
+</view>
