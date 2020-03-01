@@ -1,0 +1,11 @@
+<!--miniprogram/templates/carlist-thin/carlist-thin.wxml-->
+<template name="carlist-thin">
+<view class="car-list-group">
+	<image class="car-img" src="{{img}}"/>
+	<view class="car-info">
+		<view class="car-name"></view>
+		<view class="car-detail"></view>
+		<view class="sale-price"></view>
+	</view>
+</view>
+</template>

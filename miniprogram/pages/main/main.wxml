@@ -1,12 +1,17 @@
-<!--miniprogram/pages/main/main.wxml-->
-<view class="main-group">
-	<view class="title-group">
-		<image class="title" src="./images/title.png" />
+<!-- miniprogram/pages/main/main.wxml -->
+<import src="/templates/carlistmain/carlistmain.wxml" />
+<view class="title-group">
+	<image class="title" src="./images/title.png" style="width:140rpx;height:70rpx" />
+	<view style="padding-left:20rpx">万鑫名车</view>
+</view>
+<view class="bannerImage-group">
+	<image class="bannerImage" src="./images/bannerImage.jpg" />
+</view>
+<searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
+<view class="onsale-group">
+	<view class="onsale-header">在售车型</view>
+	<view wx:for="{{carList}}" wx:key="id" class="onsale-list">		
+		<template wx:if="{{index<4}}" is="carlist-main" data="{{...item}}"></template>
 	</view>
-	<view class="bannerImage-group">
-		<image class="bannerImage" src="./images/bannerImage.jpg" />
-	</view>
-	<view class="search-group">
-		<input class="search">sddf</input>
-	</view>
+	<navigator class="onsale-more" url="">查看更多车辆></navigator>
 </view>

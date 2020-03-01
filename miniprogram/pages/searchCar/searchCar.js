@@ -1,47 +1,18 @@
-// miniprogram/pages/buy/buy.js
+// miniprogram/pages/searchCar/searchCar.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
 
-  },
-
-  getCarList: function (keyword) {
-    var that = this;
-    if (!keyword) {
-      keyword = ''
-    }
-    wx.request({
-      url: 'https://wanxin.souche.com/api/search/car.json',
-      data: {
-        "keyword": keyword
-      },
-      success: function (res) {
-        var carList =  res.data.data.carList;
-        var pageNo = res.data.data.pageNo;
-        var pageNum = res.data.data.pageNum;
-        var pageSize = res.data.data.pageSize;
-        var totalNum = res.data.data.totalNum;
-        console.log(res)
-        that.setData({
-          carList:carList,
-          pageNo:pageNo,
-          pageNum:pageNum,
-          pageSize:pageSize,
-          totalNum:totalNum
-        })
-      }
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCarList()
+
   },
 
   /**

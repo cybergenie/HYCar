@@ -8,11 +8,68 @@ Page({
 
   },
 
+  onClickSearchSubmit: function onClickSearchSubmit(e) {
+    this.getCarList(e.detail.content)
+  },
+
+  getCarList: function (keyword) {
+    var that = this;
+    if (!keyword) {
+      keyword = ''
+    }
+    wx.request({
+      url: 'https://wanxin.souche.com/api/search/car.json',
+      data: {
+        "keyword": keyword
+      },
+      success: function (res) {
+        var carList =  res.data.data.carList;
+        var pageNo = res.data.data.pageNo;
+        var pageNum = res.data.data.pageNum;
+        var pageSize = res.data.data.pageSize;
+        var totalNum = res.data.data.totalNum;
+        console.log(res)
+        that.setData({
+          carList:carList,
+          pageNo:pageNo,
+          pageNum:pageNum,
+          pageSize:pageSize,
+          totalNum:totalNum
+        })
+      }
+    })
+  },
+
+  getCarRecommend: function () {
+    var that = this;
+    wx.request({
+      url: 'https://wanxin.souche.com/api/search/car.json',
+      data: {
+        "userTag":"EU8i32noLp"
+      },
+      success: function (res) {
+        var carList =  res.data.data.carList;
+        var pageNo = res.data.data.pageNo;
+        var pageNum = res.data.data.pageNum;
+        var pageSize = res.data.data.pageSize;
+        var totalNum = res.data.data.totalNum;
+        console.log(res)
+        that.setData({
+          carList:carList,
+          pageNo:pageNo,
+          pageNum:pageNum,
+          pageSize:pageSize,
+          totalNum:totalNum
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCarList()
   },
 
   /**

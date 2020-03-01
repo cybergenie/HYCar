@@ -1,0 +1,26 @@
+<view class="searchbar">
+  <view class="search-navigator-group" wx:if="{{isnavigator}}">
+    <navigator url='/pages/searchCar/searchCar' class='search-navigator'>
+      <icon style="width:60rpx" type="search" size="20" color="gray" />
+      品牌/车型
+    </navigator>
+    <view>
+      <image src="images/list-wide.png" style="width:60rpx;height:60rpx" />
+    </view>
+  </view>
+
+  <view wx:elif="{{ismain}}" class="search-main-group">
+  <view class="search-main-input-group">
+    <icon style="padding:0rpx 20rpx" type="search" size="20" color="gray" bindtap="onClickSearch"/>
+    <input class='search-main-input' confirm-type="search" placeholder='输入品牌/车型' bindconfirm="bindConfirmSearch" bindfocus="bindSearchInput" value="{{searchValue}}" bindinput="bindSearchInput" auto-focus />
+  </view>
+</view>
+
+  <view wx:else class="search-group">
+    <view class="search-input-group">
+      <icon style="padding:0rpx 20rpx" type="search" size="20" color="gray" />
+      <input class='search-input' placeholder='品牌/车型' />
+    </view>
+    <navigator style="margin:0rpx 40rpx" open-type="navigateBack">取消</navigator>
+  </view>
+</view>

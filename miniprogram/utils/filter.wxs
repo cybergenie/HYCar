@@ -1,0 +1,10 @@
+//日期格式化-------------------------------------------------------------
+var formatTime = function (strDate) {
+    // 解决ios出现NaN问题
+    var tempDate = strDate.replace('年', '/');
+    var realDate = tempDate.replace('月', '');
+    return realDate;
+}
+module.exports = {
+    formatTime: formatTime,//日期格式化
+}

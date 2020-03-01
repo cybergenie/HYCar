@@ -1,0 +1,36 @@
+/* miniprogram/templates/carList-main/carList-main.wxss */
+.car-list-group{
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    padding: 40rpx 0rpx;
+    border-bottom: 1px solid #f5f5f5;
+   
+}
+.car-img{    
+    width: 200rpx;
+    height: 150rpx; 
+    flex: initial;
+    padding-right: 20rpx;
+    
+}
+
+.car-info{
+    flex: 1;
+    width: 100%;
+    word-break: break-all;
+    
+}
+.car-name{
+    font-size: medium; 
+}
+.car-detail{
+    padding: 5rpx 0rpx;
+    font-size: small;
+    color: #858585;
+}
+.sale-price{
+    font-size: small;
+    color: #e30000;  
+}
+
