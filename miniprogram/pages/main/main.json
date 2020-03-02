@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "searchbar":"/components/searchbar/searchbar",
-    "carlist":"/components/carlist/carlist"
+    "carlist":"/components/carlist/carlist",
+    "segment":"/components/segment/segment"
   }
 }

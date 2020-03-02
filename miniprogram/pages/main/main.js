@@ -6,15 +6,17 @@ Page({
    */
   data: {
     swiperImgUrls:[
-      "//img.souche.com/20161117/jpg/284e46c7da1ba9af64ae2c9fda63aae1.jpg",
-      "//img.souche.com/20161117/jpg/c5bf2c29ae7178fd57dcd4fc7a09a89c.jpg",
-      "//img.souche.com/20161117/jpg/06a0f2253ed58da11aebcb5275b753c9.jpg",
-      "//img.souche.com/20161117/jpg/1b560324d2541dca60b04c1552108f6a.jpg",
-      "//img.souche.com/20161117/jpg/a1ff51260f3d930f173f56123b8ff219.jpg",
-      "//img.souche.com/20161117/jpg/c972bdfac1227a22a1d0f7d4a5783c7b.jpg"
-    ]
+      "https://img.souche.com/20161117/jpg/284e46c7da1ba9af64ae2c9fda63aae1.jpg",
+      "https://img.souche.com/20161117/jpg/c5bf2c29ae7178fd57dcd4fc7a09a89c.jpg",
+      "https://img.souche.com/20161117/jpg/06a0f2253ed58da11aebcb5275b753c9.jpg",
+      "https://img.souche.com/20161117/jpg/1b560324d2541dca60b04c1552108f6a.jpg",
+      "https://img.souche.com/20161117/jpg/a1ff51260f3d930f173f56123b8ff219.jpg",
+      "https://img.souche.com/20161117/jpg/c972bdfac1227a22a1d0f7d4a5783c7b.jpg"
+    ],
+    items: ['最新','关注','同城']
 
   },
+  
 
   onClickSearchSubmit: function onClickSearchSubmit(e) {
     this.getCarListByModule(e.detail.content)
@@ -38,7 +40,7 @@ Page({
         })
       }
     })
-  },
+  }, 
 
   getCarRecommend: function () {
     var that = this;
@@ -69,7 +71,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCarListByModule()
+    this.getCarListByModule()    
   },
 
   /**

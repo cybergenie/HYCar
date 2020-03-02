@@ -1,27 +1,33 @@
 <!-- miniprogram/pages/main/main.wxml -->
 <import src="/templates/carListMain/carListMain.wxml" />
 <view class="title-group">
-	<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
-	<view style="padding-left:20rpx">万鑫名车</view>
+				<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
+				<view style="padding-left:20rpx">万鑫名车</view>
 </view>
 <view class="bannerImage-group">
-	<image class="bannerImage" src="./images/bannerImage.jpg" />
+				<image class="bannerImage" src="./images/bannerImage.jpg" />
 </view>
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
-	<view class="onsale-header">在售车型</view>
-	<view wx:for="{{carList}}" wx:key="id" class="onsale-list">		
-		<template wx:if="{{index<4}}" is="carlist-main" data="{{...item}}"></template>
-	</view>	
+				<view class="onsale-header">在售车型</view>
+				<view wx:for="{{carList}}" wx:key="id" class="onsale-list">
+								<template wx:if="{{index<4}}" is="carlist-main" data="{{...item}}"></template>
+				</view>
 </view>
 <navigator class="onsale-more" url="">查看更多车辆></navigator>
-<view class="swiper-group"></view>
-<swiper indicator-dots ="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
-	<view class="swiper-box" wx:for="{{swiperImgUrls}}">
-		<swiper-item >
-		<image src="{{item}}" mode="scaleToFill"  style="width:100%;height:100%"/>
-	</swiper-item>
-	</view>
-	
-	
+<view class="swiper-group">
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
+	<block class="swiper-box" wx:for="{{swiperImgUrls}}" wx:key="index">
+		<swiper-item>
+			<image src="{{item}}" style="width:100%"/>
+		</swiper-item>
+	</block>
 </swiper>
+</view>
+<block>
+<segment items="{{items}}" defaultIndex="1" binditemchanged="onSegmentItemChanged">
+  <view slot="0" class='segment-page newsest-page'>最新的页面</view>
+  <view slot="1" class='segment-page focus-page'>关注的页面</view>
+  <view slot="2" class='segment-page city-page'>同城的页面</view>
+</segment>
+</block>

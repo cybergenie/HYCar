@@ -1,6 +1,5 @@
 <!--miniprogram/templates/carList-main/carList-main.wxml-->
 <template name='carlist-main'>
-<wxs src="../../utils/filter.wxs" module="tutil"/>
 <view class="car-list-group">	
 		<image class="car-img" src="{{smallImage}}"/>
 		<view class="car-info">
