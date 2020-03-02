@@ -1,7 +1,7 @@
 <!-- miniprogram/pages/main/main.wxml -->
-<import src="/templates/carlistmain/carlistmain.wxml" />
+<import src="/templates/carListMain/carListMain.wxml" />
 <view class="title-group">
-	<image class="title" src="./images/title.png" style="width:140rpx;height:70rpx" />
+	<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
 	<view style="padding-left:20rpx">万鑫名车</view>
 </view>
 <view class="bannerImage-group">
@@ -12,6 +12,16 @@
 	<view class="onsale-header">在售车型</view>
 	<view wx:for="{{carList}}" wx:key="id" class="onsale-list">		
 		<template wx:if="{{index<4}}" is="carlist-main" data="{{...item}}"></template>
-	</view>
-	<navigator class="onsale-more" url="">查看更多车辆></navigator>
+	</view>	
 </view>
+<navigator class="onsale-more" url="">查看更多车辆></navigator>
+<view class="swiper-group"></view>
+<swiper indicator-dots ="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
+	<view class="swiper-box" wx:for="{{swiperImgUrls}}">
+		<swiper-item >
+		<image src="{{item}}" mode="scaleToFill"  style="width:100%;height:100%"/>
+	</swiper-item>
+	</view>
+	
+	
+</swiper>

@@ -2,11 +2,11 @@
 <template name='carlist-main'>
 <wxs src="../../utils/filter.wxs" module="tutil"/>
 <view class="car-list-group">	
-		<image class="car-img" src="{{img}}"/>
+		<image class="car-img" src="{{smallImage}}"/>
 		<view class="car-info">
 			<view class="car-name">{{modelName}}</view>
-			<view class="car-detail">{{cityName}}| {{tutil.formatTime(firstLicensePlateDate)}}上牌| {{mileageWan}}公里</view>
-			<view class="sale-price">{{guidePriceWan}}万</view>
+			<view class="car-detail">{{cityName}}| {{year}}| {{mileage}}公里</view>
+			<view class="sale-price">{{price}}</view>
 		</view>	
 	</view>
 </template>

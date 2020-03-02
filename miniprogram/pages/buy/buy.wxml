@@ -1,5 +1,5 @@
 <!--miniprogram/pages/buy/buy.wxml-->
-<import src="/templates/carlistmain/carlistmain.wxml" />
+<import src="/templates/carListMain/carListMain.wxml" />
 <searchbar isnavigator="true"></searchbar>
 
 	<view wx:for="{{carList}}" wx:key="id" class="buy-group">		

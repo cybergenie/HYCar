@@ -21,7 +21,7 @@
 }
 
 .search-main-group{
-  height: 110rpx;
+  height: 120rpx;
   width: 100%;
   background-color: #eeeeee;
   font-size: small;
@@ -32,7 +32,7 @@
 
 .search-main-input-group{
   flex: 1;
-  height: 70rpx;
+  height: 80rpx;
   width: 100%;
   margin: 20rpx 40rpx;
   border-radius: 10rpx;
@@ -41,6 +41,10 @@
   display: flex;
   justify-content: left;
   align-items: center;
+}
+
+.search-main-input{
+  width: 100%;
 }
 
 .search-navigator{
@@ -78,5 +82,6 @@
 }
 
 .search-input{
+  width: 100%;
   font-size: small;
 }

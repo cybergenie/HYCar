@@ -1,5 +1,5 @@
 /* miniprogram/pages/buy/buy.wxss */
-@import "../../templates/carlistmain/carlistmain.wxss";
+@import "../../templates/carListMain/carListMain.wxss";
 .buy-group{
   margin: 0rpx 40rpx;
 }
