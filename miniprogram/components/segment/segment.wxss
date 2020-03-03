@@ -4,16 +4,15 @@
 
 .segment-header{
   width: 100%;
-  height: 50rpx;
-  border: 1px solid #e4e4e4;
-  border-radius: 10px;
+  height: 88rpx;
+  border-bottom: 1px solid #333333;  
   display: flex;
+  box-sizing: border-box;
 }
 
 .segment-item{
-  flex: 1;
-  border-right: 1px solid #e4e4e4;
-  font-size: 14px;
+  flex: 1;  
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,11 +22,13 @@
   border: none;
 }
 
-.segment-header .active{
-  background: #1AAD16;
-  color: #fff;
+.segment-header .active{  
+  color: #e30000;
+  border-bottom: 2px solid #e30000;
 }
 
 .segment-body{
   width: 100%;
+  display: flex;   
+  flex-wrap: wrap;
 }

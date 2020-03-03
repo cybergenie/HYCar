@@ -49,7 +49,7 @@
 
 .swiper-group{
   width: 100%;
-  height: 350rpx;
+  height: 340rpx;
   padding: 30rpx 0rpx 0rpx 0rpx; 
 }
 
@@ -58,7 +58,41 @@
   height: 100%;
   display: inline-block;
 }
-.segment-page{
-  width: 100%;
-  height: 400px;
+
+.car-module-list{
+  width: 187.5rpx;
+  padding: 30rpx 0rpx;
+  flex: content;
+}
+.car-module{
+  width: 116rpx;
+  height: 130rpx;
+}
+
+.car-price-list{
+  width: 187.5rpx;
+  padding: 30rpx 0rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #666666;
+}
+.car-price{
+  width: 116rpx;
+  height: 130rpx;   
+}
+
+.car-hotBrands-list{
+  width: 187.5rpx;
+  padding: 30rpx 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24rpx;
+  color: #666666;
+}
+.car-hotBrand{
+  width: 116rpx;  
+  display: flex;
+  flex-direction: row;
 }

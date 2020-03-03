@@ -1,11 +1,12 @@
 <!--miniprogram/templates/carlist-thin/carlist-thin.wxml-->
 <template name="carlist-thin">
-<view class="car-list-group">
-	<image class="car-img" src="{{img}}"/>
-	<view class="car-info">
-		<view class="car-name"></view>
-		<view class="car-detail"></view>
-		<view class="sale-price"></view>
+<view class="car-list-group">	
+		<image class="car-img" src="{{smallImage}}"/>
+		<view class="car-info">
+			<view class="car-name">{{seriesName}}</view>
+			<view class="car-name">{{simpleModelName}}</view>
+			<view class="car-detail">{{firstLicensePlateDate}}| {{mileageWan}}公里| {{cityName}}</view>
+			<view class="sale-price">{{price}}</view>
+		</view>	
 	</view>
-</view>
 </template>

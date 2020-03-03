@@ -9,12 +9,14 @@
 </view>
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
-				<view class="onsale-header">在售车型</view>
-				<view wx:for="{{carList}}" wx:key="id" class="onsale-list">
-								<template wx:if="{{index<4}}" is="carlist-main" data="{{...item}}"></template>
-				</view>
+	<view class="onsale-header">在售车型</view>
+	<view wx:for="{{carList}}" wx:key="id" class="onsale-list">
+		<template is="carlist-main" data="{{...item}}"></template>
+	</view>
 </view>
-<navigator class="onsale-more" url="">查看更多车辆></navigator>
+<block>
+	<navigator class="onsale-more" url="">查看更多车辆></navigator>
+</block>
 <view class="swiper-group">
 <swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
 	<block class="swiper-box" wx:for="{{swiperImgUrls}}" wx:key="index">
@@ -25,9 +27,18 @@
 </swiper>
 </view>
 <block>
-<segment items="{{items}}" defaultIndex="1" binditemchanged="onSegmentItemChanged">
-  <view slot="0" class='segment-page newsest-page'>最新的页面</view>
-  <view slot="1" class='segment-page focus-page'>关注的页面</view>
-  <view slot="2" class='segment-page city-page'>同城的页面</view>
-</segment>
+	<segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
+  		<view slot="0" class='car-hotBrands-list' >	
+			<block wx:for="{{carHotBrands}}" wx:key="index" wx:if="{{index<8}}">	
+				<image  src="{{item.url}}" style="width:74.5rpx;height:56rpx"/>
+				<view >{{item.name}}</view>	
+			</block>
+		</view>
+  		<view slot="1" class='car-price-list' wx:for="{{carPriceList}}" wx:key="index">
+			  <block class="car-price">{{item}}</block>
+		  </view>
+  		<view slot="2" class='car-module-list' wx:for="{{carModuleList}}" wx:key="index">
+		  <image class="car-module" src="{{item.url}}"/>
+		</view>
+	</segment>
 </block>
