@@ -1,5 +1,8 @@
 /* miniprogram/pages/main/main.wxss */
 @import "../../templates/carListMain/carListMain.wxss";
+part{
+  background-color: #f5f5f5;
+}
 
 .title-group{
   height: 120rpx;
@@ -25,6 +28,7 @@
 .onsale-header{
   height: 150rpx;
   font-size: x-large;
+  color: #0f111a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +53,9 @@
 
 .swiper-group{
   width: 100%;
-  height: 340rpx;
-  padding: 30rpx 0rpx 0rpx 0rpx; 
+  height: 350rpx;
+  background-color: #f5f5f5;
+  padding: 30rpx 0rpx; 
 }
 
 .swiper-box{
@@ -60,9 +65,11 @@
 }
 
 .car-module-list{
-  width: 187.5rpx;
+  width: 187.5rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 30rpx 0rpx;
-  flex: content;
 }
 .car-module{
   width: 116rpx;
@@ -70,10 +77,18 @@
 }
 
 .car-price-list{
-  width: 187.5rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50rpx 32rpx;
+
+}
+
+.car-price-group{
+  width: 171.5rpx;
   padding: 30rpx 0rpx;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 24rpx;
   color: #666666;
 }
@@ -83,16 +98,46 @@
 }
 
 .car-hotBrands-list{
-  width: 187.5rpx;
-  padding: 30rpx 0rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;  
+  display: flex; 
+  padding: 30rpx 0rpx; 
+  flex-wrap: wrap;
   font-size: 24rpx;
   color: #666666;
 }
-.car-hotBrand{
-  width: 116rpx;  
+.car-hotBrand-group{
+  width: 187.5rpx;
+  height: 83rpx;
   display: flex;
-  flex-direction: row;
+  padding: 24rpx 0rpx;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brands-more{  
+  width: 100%;
+  height: 88rpx;
+  margin: 32rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rpx;
+  background-color: #e30000;
+  color: white;
+}
+
+.shop-info-group{  
+  font-size: x-large;
+  color: #0f111a;
+  display: flex;
+  justify-content: center;
+  padding: 48rpx;
+}
+.shop-info-header{  
+  font-size: x-large;
+  color: #0f111a;
+  display: flex;
+  justify-content: center;
+  padding: 48rpx;
 }

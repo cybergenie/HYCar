@@ -1,5 +1,5 @@
 <!-- miniprogram/pages/main/main.wxml -->
-<import src="/templates/carListMain/carListMain.wxml" />
+<import src="./templates/carListMain/carListMain.wxml" />
 <view class="title-group">
 				<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
 				<view style="padding-left:20rpx">万鑫名车</view>
@@ -18,27 +18,35 @@
 	<navigator class="onsale-more" url="">查看更多车辆></navigator>
 </block>
 <view class="swiper-group">
-<swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
-	<block class="swiper-box" wx:for="{{swiperImgUrls}}" wx:key="index">
+<swiper class="swiper-box" indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
+	<block wx:for="{{swiperImgUrls}}" wx:key="index">
 		<swiper-item>
 			<image src="{{item}}" style="width:100%"/>
 		</swiper-item>
 	</block>
 </swiper>
 </view>
-<block>
+
 	<segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
   		<view slot="0" class='car-hotBrands-list' >	
-			<block wx:for="{{carHotBrands}}" wx:key="index" wx:if="{{index<8}}">	
+			<view class="car-hotBrand-group" wx:for="{{carHotBrands}}" wx:key="index" wx:if="{{index<8}}">	
 				<image  src="{{item.url}}" style="width:74.5rpx;height:56rpx"/>
 				<view >{{item.name}}</view>	
-			</block>
+			</view>
+			
+				<navigator class="brands-more" url="">更多品牌></navigator>
+			
 		</view>
-  		<view slot="1" class='car-price-list' wx:for="{{carPriceList}}" wx:key="index">
-			  <block class="car-price">{{item}}</block>
+  		<view slot="1" class='car-price-list'>
+			  <view class="car-price-group"  wx:for="{{carPriceList}}" wx:key="index">
+			  	<block class="car-price">{{item}}</block>
+			  </view>
 		  </view>
   		<view slot="2" class='car-module-list' wx:for="{{carModuleList}}" wx:key="index">
 		  <image class="car-module" src="{{item.url}}"/>
 		</view>
 	</segment>
-</block>
+	<view class="shop-info-group">
+	<view class="shop-info-header">门店信息</view>
+	<view class="shop-info-adress"></view>
+	</view>
