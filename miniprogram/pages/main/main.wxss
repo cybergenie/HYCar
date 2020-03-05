@@ -1,8 +1,5 @@
 /* miniprogram/pages/main/main.wxss */
-@import "../../templates/carListMain/carListMain.wxss";
-part{
-  background-color: #f5f5f5;
-}
+@import "../templates/carListMain/carlistmain.wxss";
 
 .title-group{
   height: 120rpx;

@@ -1,5 +1,5 @@
 <!-- miniprogram/pages/main/main.wxml -->
-<import src="./templates/carListMain/carListMain.wxml" />
+<import src="/miniprogram/pages/templates/carListMain/carlistmain.wxml" />
 <view class="title-group">
 				<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
 				<view style="padding-left:20rpx">万鑫名车</view>
