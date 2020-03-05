@@ -1,5 +1,5 @@
 <!-- miniprogram/pages/main/main.wxml -->
-<import src="/miniprogram/pages/templates/carListMain/carlistmain.wxml" />
+<import src="../templates/carListMain/carlistmain.wxml" />
 <view class="title-group">
 				<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
 				<view style="padding-left:20rpx">万鑫名车</view>
@@ -46,7 +46,18 @@
 		  <image class="car-module" src="{{item.url}}"/>
 		</view>
 	</segment>
-	<view class="shop-info-group">
-	<view class="shop-info-header">门店信息</view>
-	<view class="shop-info-adress"></view>
+	<view class="shop-module-group">
+	<view class="shop-module-header">门店信息</view>
+	<view class="shop-module-body">
+		<view>
+			<view class="shop-container">
+				
+			</view>
+		<view class="city-name"></view>
+		<view class="shop-name"></view>
+		
+		<view class="shop-address"></view>
+		<view class="phone-number"></view>
+		</view>
+	</view>
 	</view>

@@ -25,8 +25,7 @@
     word-break: break-all;
     
 }
-.car-name{
-    height: 76rpx;
+.car-name{    
     font-size: 30rpx; 
     color: #333333;
     
@@ -36,7 +35,17 @@
     font-size: small;
     color: #999999;
 }
+.sale-price-group{
+    display: flex;
+    align-items:baseline
+}
 .sale-price{
     font-size: small;
     color: #e30000;  
+}
+.guide-price{
+    font-size: x-small;
+    color: #999999;
+    text-decoration: line-through;
+    padding: 0rpx 20rpx; 
 }

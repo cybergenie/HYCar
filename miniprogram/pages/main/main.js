@@ -73,8 +73,7 @@ Page({
       url: 'https://wanxin.souche.com/api/search/options/brands.json',      
       success: function (res) {
         var carBrands = res.data.data.brands;
-        var carHotBrands = res.data.data.hotBrands;
-        console.log(carHotBrands)
+        var carHotBrands = res.data.data.hotBrands;        
         that.setData({
           carBrands: carBrands,
           carHotBrands:carHotBrands
@@ -94,7 +93,7 @@ Page({
         "moduleId": 165456
       },
       success: function (res) {
-        var carList = res.data.data.items;        
+        var carList = res.data.data.items;              
         that.setData({
           carList: carList
         })

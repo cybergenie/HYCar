@@ -17,7 +17,8 @@ Page({
     wx.request({
       url: 'https://wanxin.souche.com/api/search/car.json',
       data: {
-        "keyword": keyword
+        "keyword": keyword,
+        "sortName":"smart"
       },
       success: function (res) {
         var carList =  res.data.data.carList;
@@ -25,7 +26,7 @@ Page({
         var pageNum = res.data.data.pageNum;
         var pageSize = res.data.data.pageSize;
         var totalNum = res.data.data.totalNum;
-        console.log(res)
+        console.log(carList)
         that.setData({
           carList:carList,
           pageNo:pageNo,
