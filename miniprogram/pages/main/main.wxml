@@ -1,11 +1,11 @@
 <!-- miniprogram/pages/main/main.wxml -->
 <import src="../templates/carListMain/carlistmain.wxml" />
 <view class="title-group">
-				<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
-				<view style="padding-left:20rpx">万鑫名车</view>
+	<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
+	<view style="padding-left:20rpx">万鑫名车</view>
 </view>
 <view class="bannerImage-group">
-				<image class="bannerImage" src="./images/bannerImage.jpg" />
+	<image class="bannerImage" src="./images/bannerImage.jpg" />
 </view>
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
@@ -47,17 +47,16 @@
 		</view>
 	</segment>
 	<view class="shop-module-group">
-	<view class="shop-module-header">门店信息</view>
-	<view class="shop-module-body">
-		<view>
-			<view class="shop-container">
-				
+		<view style="padding-bottom:2rpx">
+			<view class="shop-module-header">门店信息</view>
+			<view class="shop-module-body">
+				<view class="shop-container">
+					<view class="shop-info-container">
+						<block class="shop-city">长春</block> 
+						万鑫名车
+					</view>
+					<view class="shop-operation-container"></view>
+				</view>
 			</view>
-		<view class="city-name"></view>
-		<view class="shop-name"></view>
-		
-		<view class="shop-address"></view>
-		<view class="phone-number"></view>
 		</view>
-	</view>
 	</view>
