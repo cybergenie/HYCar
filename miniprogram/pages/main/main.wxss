@@ -127,52 +127,67 @@ part{
 }
 
 .shop-module-group{  
-  font-size: x-large;
-  color: #0f111a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f5f5f5;
-  padding: 30rpx 0rpx;
-}
-.shop-module-header{  
-  width: 100%;
-  font-size: x-large;
+  margin-bottom: 32rpx;
   background-color: white;
-  color: #0f111a;
-  display: flex;
-  justify-content: center;
+}
+.shop-module-header{ 
+  font-size: x-large;  
+  color: #0f111a;  
+  text-align: center;
+  line-height: 52rpx;
   padding: 48rpx 0rpx;
 }
 .shop-module-body{
-  width: 100%;
-  height: 202rpx;
+  width: 100%;  
   background-image: url('//img.souche.com/20160727/png/591f2a77d3cb3b10cc90472b24d364dd.png') ;
-  background-position-x: 50%;
-  background-position-y: 50%;
+  background-position: 50%;
   background-repeat: no-repeat; 
-  background-size: contain;
-  background-color: white;
-  box-sizing: border-box; 
-  display: block;
+  background-size: contain;  
+  box-sizing: border-box;   
   margin-bottom: 32rpx;
-  padding-left: 32rpx;
+  padding-left: 32rpx; 
 
 }
-.shop-info-address{
-  width: 100%;
-  height: 200rpx;
-  padding: 32rpx 240rpx 32rpx 0rpx;
-  background-color: white;
-  
-  background-size: 500rpx 200rpx;
-  background-repeat: no-repeat;  
+
+.shop-container{
+  position: relative;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 32rpx 240rpx 32rpx 0;
+  color: #484d5c;
 }
-.city-name{
+
+.shop-info-container{
+
+}
+
+.shop-city{
   background-color:#999999;
   font-size: x-small;
   width:64rpx;
-  height:32rpx;
+  line-height:32rpx;
   color:white;
-  display: flex;
+  display: inline-block;
+  position: relative;
+  padding: 0 8rpx;
+  top: -4rpx;
+}
+
+.shop-address{
+  font-size: small;
+  line-height: 68rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666666;
+}
+.shop-tel{
+  font-size: small;
+  white-space: nowrap;
+  color: #666666;
+}
+.shop-operation-container{
+  position: absolute;
+  top: 52rpx;
+  right: 0;
+  padding-right: 32rpx;
 }

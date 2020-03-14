@@ -52,10 +52,14 @@
 			<view class="shop-module-body">
 				<view class="shop-container">
 					<view class="shop-info-container">
-						<block class="shop-city">长春</block> 
+						<view  class="shop-city">长春</view> 
 						万鑫名车
 					</view>
-					<view class="shop-operation-container"></view>
+					<view class="shop-address">长春市西环城路6988号 华圣万鑫名车广场</view>
+					<view class="shop-tel">13843000004</view>
+					<view class="shop-operation-container">
+						view.operation-item-
+					</view>
 				</view>
 			</view>
 		</view>
