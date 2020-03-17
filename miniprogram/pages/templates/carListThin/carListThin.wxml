@@ -3,9 +3,9 @@
 <view class="car-list-group">	
 		<image class="car-img" src="{{img}}"/>
 		<view class="car-info">
-			<view class="car-name">{{seriesName}}</view>
-			<view class="car-name">{{simpleModelName}}</view>
-			<view class="car-detail">{{firstLicensePlateDate}}| {{mileageWan}}公里| {{cityName}}</view>
+			<view class="car-name-thin">{{seriesName}}</view>
+			<view class="car-name-thin">{{simpleModelName}}</view>
+			<view class="car-detail-thin">{{firstLicensePlateDate}}| {{mileageWan}}公里| {{cityName}}</view>
 			<view class="sale-price-group">
 				<view class="sale-price">{{priceWan}}万  </view>
 				<view class="guide-price">{{guidePriceWan}}万</view>

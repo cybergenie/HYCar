@@ -25,12 +25,12 @@
     word-break: break-all;
     
 }
-.car-name{    
+.car-name-thin{    
     font-size: 30rpx; 
     color: #333333;
     
 }
-.car-detail{
+.car-detail-thin{
     padding: 5rpx 0rpx;
     font-size: small;
     color: #999999;

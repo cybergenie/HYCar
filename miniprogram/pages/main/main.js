@@ -101,25 +101,17 @@ Page({
     })
   },
 
-  getCarRecommend: function () {
+  getCarRecommand: function () {
     var that = this;
     wx.request({
-      url: 'https://wanxin.souche.com/api/search/car.json',
+      url: 'https://wanxin.souche.com/api/car/homepage/recommend.json',
       data: {
         "userTag": "EU8i32noLp"
       },
       success: function (res) {
-        var carList = res.data.data.carList;
-        var pageNo = res.data.data.pageNo;
-        var pageNum = res.data.data.pageNum;
-        var pageSize = res.data.data.pageSize;
-        var totalNum = res.data.data.totalNum;        
+        var recommandCarList = res.data.data;        
         that.setData({
-          carList: carList,
-          pageNo: pageNo,
-          pageNum: pageNum,
-          pageSize: pageSize,
-          totalNum: totalNum
+          recommandCarList: recommandCarList         
         })
       }
     })
@@ -135,6 +127,7 @@ Page({
   onLoad: function (options) {
     this.getCarListByModule()
     this.getBrandList()
+    this.getCarRecommand()
   },
 
   /**

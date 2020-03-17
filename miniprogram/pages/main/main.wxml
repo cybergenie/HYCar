@@ -1,8 +1,9 @@
 <!-- miniprogram/pages/main/main.wxml -->
 <import src="../templates/carListMain/carlistmain.wxml" />
+<import src="../templates/carListThin/carListThin.wxml" />
 <view class="title-group">
 	<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
-	<view style="padding-left:20rpx">万鑫名车</view>
+	<view style="padding-left:20rpx">华阳二手车</view>
 </view>
 <view class="bannerImage-group">
 	<image class="bannerImage" src="./images/bannerImage.jpg" />
@@ -26,7 +27,7 @@
 	</block>
 </swiper>
 </view>
-
+<view  class="search-filter-container">
 	<segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
   		<view slot="0" class='car-hotBrands-list' >	
 			<view class="car-hotBrand-group" wx:for="{{carHotBrands}}" wx:key="index" wx:if="{{index<8}}">	
@@ -46,6 +47,7 @@
 		  <image class="car-module" src="{{item.url}}"/>
 		</view>
 	</segment>
+</view>
 	<view class="shop-module-group">
 		<view style="padding-bottom:2rpx">
 			<view class="shop-module-header">门店信息</view>
@@ -53,14 +55,24 @@
 				<view class="shop-container">
 					<view class="shop-info-container">
 						<view  class="shop-city">长春</view> 
-						万鑫名车
+						宝悦行二手车
 					</view>
-					<view class="shop-address">长春市西环城路6988号 华圣万鑫名车广场</view>
-					<view class="shop-tel">13843000004</view>
+					<view class="shop-address">长春经济技术开发区 临河街6373号</view>
+					<view class="shop-tel">0431-84667667</view>
 					<view class="shop-operation-container">
-						view.operation-item-
+						<navigator  class="operation-item ">
+							<image  src="./images/tel.png" style="width:80rpx;height:80rpx;" alt="电话"/>
+						</navigator>
+						<navigator  class="operation-item ">
+							<image  src="./images/adrs.png" style="width:80rpx;height:80rpx;" alt="电话"/>
+						</navigator>
 					</view>
 				</view>
 			</view>
 		</view>
 	</view>
+<view class="recommand-car-container">
+	<view wx:for="{{recommandCarList}}" wx:key="id" class="recommand-car-list">		
+		<template is="carlist-thin" data="{{...item}}"></template>
+	</view>
+</view>
