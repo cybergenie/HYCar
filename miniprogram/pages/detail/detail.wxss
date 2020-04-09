@@ -1,0 +1,34 @@
+/* miniprogram/pages/detail/detail.wxss */
+page{
+    background-color: #f2f2f2;
+  }
+
+  .image-slider{
+      width: 750rpx;
+      height: 500rpx;
+  }
+  .swiper-container{
+      width: 100%;
+      height: 100%;
+  }
+  .titleContainer{
+      width: 100%;
+      background-color: white;
+  }
+  .titleContent{
+      padding: 34rpx 32rpx 20rpx 32rpx;
+  }
+  .carName{
+      font-size: large;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 48rpx;
+  }
+  .carDetail{
+      font-size: small;
+      color: #1a1a1a;
+      line-height: 24rpx;
+      margin: 20rpx 0;
+      align-items: center;
+  }
+  

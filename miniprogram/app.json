@@ -2,7 +2,8 @@
   "pages": [
     "pages/main/main",
     "pages/buy/buy",
-    "pages/sale/sale"
+    "pages/sale/sale",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationStyle": "default",
@@ -29,7 +30,7 @@
         "selectedIconPath": "images/buy_selected.png"
       },
       {
-        "pagePath": "pages/sale/sale",
+        "pagePath": "pages/detail/detail",
         "text": "卖车",
         "iconPath": "images/sale.png",
         "selectedIconPath": "images/sale_selected.png"

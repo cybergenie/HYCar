@@ -1,0 +1,18 @@
+<!-- miniprogram/pages/detail/detail.wxml -->
+<view id="">
+    <view class="image-slider">
+        <swiper class="swiper-container" autoplay="{{true}}" indicator-active-color="#007aff">
+            <block wx:for="{{detailCarImgs}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item}}" style="width:100%;height:100%" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="titleContainer">
+        <view class="titleContent">
+            <view class="carName">{{detailCarTitle}}</view>
+            <view class="carDetail">{{detailCarSaleTime}}</view>
+        </view>
+    </view>
+</view>

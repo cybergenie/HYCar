@@ -1,4 +1,6 @@
 // miniprogram/pages/main/main.js
+import{network} from "network.js"
+
 Page({
 
   /**
@@ -66,68 +68,41 @@ Page({
   onClickSearchSubmit: function onClickSearchSubmit(e) {
     this.getCarListByModule(e.detail.content)
   },
-
-  getBrandList: function () {
-    var that = this;    
-    wx.request({
-      url: 'https://wanxin.souche.com/api/search/options/brands.json',      
-      success: function (res) {
-        var carBrands = res.data.data.brands;
-        var carHotBrands = res.data.data.hotBrands;        
-        that.setData({
-          carBrands: carBrands,
-          carHotBrands:carHotBrands
-        })
-      }
-    })
-  },
-
-  getCarListByModule: function (keyword) {
-    var that = this;
-    if (!keyword) {
-      keyword = ''
-    }
-    wx.request({
-      url: 'https://wanxin.souche.com/json/car/getCarListByModule.json',
-      data: {
-        "moduleId": 165456
-      },
-      success: function (res) {
-        var carList = res.data.data.items;              
+  
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    var that=this;
+    network.getCarListByModule({
+      success:function(carList){
         that.setData({
           carList: carList
         })
       }
     })
-  },
 
-  getCarRecommand: function () {
-    var that = this;
-    wx.request({
-      url: 'https://wanxin.souche.com/api/car/homepage/recommend.json',
-      data: {
-        "userTag": "EU8i32noLp"
-      },
-      success: function (res) {
-        var recommandCarList = res.data.data;        
+    network.getBrandList({
+      success:function(carBrands){
         that.setData({
-          recommandCarList: recommandCarList         
+          carBrands: carBrands
+        })
+      },
+      success:function(carHotBrands){
+        that.setData({
+          carHotBrands: carHotBrands
         })
       }
     })
-  },
 
-  onSegmentItemChanged: function (event) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.getCarListByModule()
-    this.getBrandList()
-    this.getCarRecommand()
+    network.getCarRecommand({
+      success:function(recommandCarList){
+        that.setData({
+          recommandCarList: recommandCarList
+        })
+      }
+    })
+    
   },
 
   /**

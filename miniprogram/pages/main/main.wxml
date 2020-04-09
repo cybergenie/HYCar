@@ -11,9 +11,9 @@
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
 	<view class="onsale-header">在售车型</view>
-	<view wx:for="{{carList}}" wx:key="id" class="onsale-list">
+	<navigator  wx:for="{{carList}}" wx:key="id" class="onsale-list">
 		<template is="carlist-main" data="{{...item}}"></template>
-	</view>
+	</navigator>
 </view>
 <block>
 	<navigator class="onsale-more" url="">查看更多车辆></navigator>
