@@ -24,31 +24,12 @@ Page({
     })
 
     network.getCarDetailTitle({
-      success:function(detailCarTitle){
+      success:function(detailCarInfo){
         that.setData({
-          detailCarTitle: detailCarTitle
+          detailCarInfo: detailCarInfo
         })
-      },
-      success:function(detailCarDistance){
-        that.setData({
-          detailCarDistance: detailCarDistance
-        })
-      },
-      // success:function(detailCarStandard){
-      //   that.setData({
-      //     detailCarStandard: detailCarStandard
-      //   })
-      // },
-      // success:function(detailCarSaleTime){
-      //   that.setData({
-      //     detailCarSaleTime: detailCarSaleTime
-      //   })
-      // },
-      // success:function(detailCarAddress){
-      //   that.setData({
-      //     detailCarAddress: detailCarAddress
-      //   })
-      // }
+        console.log(detailCarInfo);
+      }
     })
 
   },

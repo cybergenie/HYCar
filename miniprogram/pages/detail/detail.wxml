@@ -11,8 +11,60 @@
     </view>
     <view class="titleContainer">
         <view class="titleContent">
-            <view class="carName">{{detailCarTitle}}</view>
-            <view class="carDetail">{{detailCarSaleTime}}</view>
+            <view class="carName">{{detailCarInfo.title}}</view>
+            <view class="carDetail">
+                {{detailCarInfo.simpleInfo.saleTime}}
+                <text decode="{{true}}">&nbsp;&nbsp;</text>
+                {{detailCarInfo.simpleInfo.distanceWan}}万公里
+                <text decode="{{true}}">&nbsp;&nbsp;</text>
+                {{detailCarInfo.simpleInfo.address}}
+                <text decode="{{true}}">&nbsp;&nbsp;</text>
+                {{detailCarInfo.simpleInfo.standard}}
+            </view>
+            <view class="carPrice">{{detailCarInfo.exhibitionPriceWan}}万</view>
+            <view class="newCarPrice">
+                新车含税价：{{detailCarInfo.newCarPriceOfTaxWan}}万，省{{detailCarInfo.saveMoneyWan}}万
+            </view>
+            <view class="btnStyle">
+                <view class="priceNofication">降价通知</view>
+            </view>
+        </view>
+        <view class="couponContainer">
+            <view class="couponLabel">领卷</view>
+            <view class="couponContent">
+                <view class="couponBox">
+                    <image src="./images/coupon_header.png" class="couponImg" />
+                    <view class="couponInfo">满350000减1000</view>
+                    <image src="./images/coupon_tail.png" class="couponImg" />
+                </view>
+                <view class="arrowBox">
+                    <image src="./images/arrow_right.png" class="arrowRight" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="loanContainer">
+        <view class="loanContent">
+            <view class="loanTitleContainer">
+                <view class="loanTitle">
+                    <image src="./images/wallet.png" class="loanImg" />
+                    贷款
+                </view>
+                <view class="loanAdd">
+                    <view class="planes"> 具体方案请咨询销售顾问</view>                    
+                    <image src="./images/arrow_right.png" class="loanArrowBox" />                    
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="contactContainer">
+        <view class="contactContent">
+            <view class="contactTitle">华阳二手车</view>
+            <view class="toShop">进店逛逛
+                <image src="./images/arrow_right.png" class="loanArrowBox" />
+            </view>
+            <view class="toShopInfo"></view>
+            <view class="contactInfo"></view>
         </view>
     </view>
 </view>

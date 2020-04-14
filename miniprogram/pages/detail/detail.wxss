@@ -31,4 +31,123 @@ page{
       margin: 20rpx 0;
       align-items: center;
   }
-  
+  .carPrice{
+      font-size: large;
+      color: #ff571a;
+      line-height: 36rpx;
+      margin: 40rpx 0 20rpx 0;
+  }
+  .newCarPrice{
+      color: #999999;
+      margin: 20rpx 0;
+      line-height: 24rpx;
+      font-size: small;
+  }
+  .btnStyle{
+      float: right;
+      margin-top: -58rpx;
+      position: relative;
+      line-height: 48rpx;
+      text-align: center;
+  }
+  .priceNofication{
+      color: #191919;
+      font-size: small;
+      background-color: white;
+      padding: 0 16rpx;
+      border-radius: 5px;
+      border: 1px solid #999999;
+  }
+  .couponContainer{
+      margin-left: 32rpx;
+      padding-right: 32rpx;
+      height: 88rpx;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border: none;
+  }
+  .couponLabel{
+      padding-right: 24rpx;
+      font-size: small;
+      line-height: 24rpx;
+      color: #1a1a1a;
+  }
+  .couponContent{
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+      margin: 30rpx 0;
+      height: 28rpx;
+      width: 614rpx;
+  }
+  .couponBox{
+      display: flex;
+      margin-right: 16rpx;
+  }
+  .couponImg{
+      width: 8rpx;
+      height: 28rpx;
+      border: none;
+  }
+  .couponInfo{
+      background-color: #ff571a;
+      color: white;
+      height: 28rpx;
+      line-height: 28rpx;
+      font-size: smaller;
+  }
+  .arrowBox{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 1rpx;
+      right: 32rpx;
+  }
+  .arrowRight{
+      width: 15rpx;
+      height: 26rpx;
+  }
+  .loanContainer{
+      background-color: white;
+      margin-top: 24rpx;
+  }
+  .loanContent{
+      position: relative;
+      border: none;
+      padding-right: 32rpx;
+      margin-left: 32rpx;
+  }
+  .loanTitleContainer{
+      display: flex;
+      justify-content: space-between;
+      padding: 32rpx 0;
+  }
+  .loanTitle{
+      display: flex;
+      align-items: center;
+      font-size: medium;
+      color: #1a1a1a;
+      line-height: 40rpx;
+  }
+  .loanImg{
+      height: 40rpx;
+      width: 40rpx;
+      margin-right: 16rpx;
+  }
+  .loanAdd{
+      display: flex;
+      align-items: center;
+  }
+  .planes{
+      color: #666666;
+      font-size: small;
+  }
+  .loanArrowBox{
+      width: 15rpx;
+      height: 26rpx;
+      display: block;
+      margin-left: 20rpx;
+  }

@@ -23,19 +23,9 @@ const network = {
               carId:"67b3755a56f547d9aacdab14432937ea"
           },
           success: function (res) {
-            var detailCarTitle = res.data.data.title; 
-            var detailCarDistance = res.data.data.simpleInfo.distanceWan; 
-            var detailCarStandard = res.data.data.simpleInfo.standard;
-            var detailCarSaleTime = res.data.data.simpleInfo.saleTime;
-            var detailCarAddress = res.data.data.simpleInfo.address;  
-            console.log(params);
+            var detailCarInfo= res.data.data; 
             if(params && params.success){
-                params.success(detailCarTitle);
-                params.success(detailCarDistance);
-                params.success(detailCarStandard);
-                
-                params.success(detailCarSaleTime);
-                params.success(detailCarAddress);
+                params.success(detailCarInfo);
             }
           }
         });
