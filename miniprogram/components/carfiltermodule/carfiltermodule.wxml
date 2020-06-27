@@ -1,0 +1,22 @@
+<!--components/carfiltermodule/carfiltermodule.wxml-->
+<view  class="search-filter-container">
+	<segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
+  		<view slot="0" class='car-hotBrands-list' >	
+			<navigator class="brand-item" wx:for="{{branditems}}" wx:key="index" wx:if="{{index<8}}">
+				<view class="brand-item-logo-wrapper">
+					<image class="brand-item-logo" mode="aspectFit" src="{{item.url}}"/>
+				</view>				
+				<view class="brand-item-name">{{item.name}}</view>	
+			</navigator>			
+				<navigator class="brands-more" url="">更多品牌></navigator>			
+		</view>
+  		<view slot="1" class='car-price-list'>
+			  <view class="car-price-group"  wx:for="{{carPriceList}}" wx:key="index">
+			  	<block class="car-price">{{item}}</block>
+			  </view>
+		  </view>
+  		<view slot="2" class='car-module-list' wx:for="{{carModuleList}}" wx:key="index">
+		  <image class="car-module" src="{{item.url}}"/>
+		</view>
+	</segment>
+</view>

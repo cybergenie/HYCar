@@ -1,0 +1,73 @@
+/* components/shopinfomodule/shopinfomodule.wxss */
+.shop-module-group{  
+    margin-bottom: 32rpx;
+    background-color: white;
+  }
+  .shop-module-header{ 
+    font-size: x-large;  
+    color: #0f111a;  
+    text-align: center;
+    line-height: 52rpx;
+    padding: 48rpx 0rpx;
+  }
+  .shop-module-body{
+    width: 100%;  
+    background-image: url('//img.souche.com/20160727/png/591f2a77d3cb3b10cc90472b24d364dd.png') ;
+    background-position: 50%;
+    background-repeat: no-repeat; 
+    background-size: contain;  
+    box-sizing: border-box;   
+    margin-bottom: 32rpx;
+    padding-left: 32rpx; 
+  
+  }
+  
+  .shop-container{
+    position: relative;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 32rpx 240rpx 32rpx 0;
+    color: #484d5c;
+  }
+  
+  .shop-info-container{
+  
+  }
+  
+  .shop-city{
+    background-color:#999999;
+    font-size: x-small;
+    width:64rpx;
+    line-height:32rpx;
+    color:white;
+    display: inline-block;
+    position: relative;
+    padding: 0 8rpx;
+    top: -4rpx;
+  }
+  
+  .shop-address{
+    font-size: small;
+    line-height: 68rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666666;
+  }
+  .shop-tel{
+    font-size: small;
+    white-space: nowrap;
+    color: #666666;
+  }
+  .shop-operation-container{
+    position: absolute;
+    top: 52rpx;
+    right: 0;
+    padding-right: 32rpx;
+  }
+  
+  .operation-item{ 
+    display: inline-block;
+    width: 80rpx;
+    height: 80rpx;  
+   padding: 0 10rpx;
+  }

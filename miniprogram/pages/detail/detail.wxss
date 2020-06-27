@@ -151,3 +151,89 @@ page{
       display: block;
       margin-left: 20rpx;
   }
+  .connectContainer{
+      width: 750rpx;
+      background-color: #fff;
+  }
+  .contactContentBox{
+      position: relative;
+      padding: 34rpx 0 0 32rpx;
+  }
+  .connectTitle{
+      width: 448rpx;
+      font-size: 32rpx;
+      color: #1a1a1a;
+      line-height: 44rpx;
+  }
+  .toShopIndex{
+      position: absolute;
+      top: 44rpx;
+      right: 63rpx;
+      font-size: 24rpx;
+      color: #1a1a1a;
+  }
+  .toShopIndex_arrowIcon{
+      position: absolute;
+      top: 0;
+      right: -30rpx;
+      height: 26rpx;
+      width: 15rpx;
+  }
+  .contactInfo{
+      display: flex;
+      margin-top: 24rpx;
+      margin-bottom: 40rpx;
+      font-size: 24rpx;
+      line-height: 24rpx;
+      align-items: center;
+      align-content: center;
+      color: #999;
+  }
+  .connectContent{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-size: 27.6rpx;
+      color: #666;
+  }
+  .li-item-a{
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 28rpx 32rpx 28rpx 0;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+      position: relative;
+      border: none;
+  }
+  .address{
+      line-height: 32rpx;
+      width: 544rpx;
+  }
+.li-icon{
+    width: 32rpx;
+    height: 32rpx;
+}
+.floorTabContainer{
+    width: 750rpx;
+    background: #fff;
+}
+.section{
+    padding-top: 104rpx;
+}
+.title{
+    width: 750rpx;
+    height: 36rpx;
+    margin: 0 auto;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    color: #999;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.basic-config-content{
+    margin-top: 64rpx;
+    padding: 0 48rpx;
+}

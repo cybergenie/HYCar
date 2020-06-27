@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "searchbar":"/components/searchbar/searchbar",
-    "carlist":"/components/carlist/carlist",
-    "segment":"/components/segment/segment"
+    "carlistmodule":"/components/carlistmodule/carlistmodule",    
+    "shopinfomodule":"/components/shopinfomodule/shopinfomodule",
+    "recomcarmodule":"/components/recomcarmodule/recomcarmodule",
+    "carfiltermodule":"/components/carfiltermodule/carfiltermodule"
   }
 }

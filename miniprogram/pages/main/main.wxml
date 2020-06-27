@@ -10,14 +10,8 @@
 </view>
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
-	<view class="onsale-header">在售车型</view>
-	<navigator  wx:for="{{carList}}" wx:key="id" class="onsale-list">
-		<template is="carlist-main" data="{{...item}}"></template>
-	</navigator>
+	<carlistmodule items="{{carList}}" />	
 </view>
-<block>
-	<navigator class="onsale-more" url="">查看更多车辆></navigator>
-</block>
 <view class="swiper-group">
 <swiper class="swiper-box" indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">
 	<block wx:for="{{swiperImgUrls}}" wx:key="index">
@@ -27,52 +21,6 @@
 	</block>
 </swiper>
 </view>
-<view  class="search-filter-container">
-	<segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
-  		<view slot="0" class='car-hotBrands-list' >	
-			<view class="car-hotBrand-group" wx:for="{{carHotBrands}}" wx:key="index" wx:if="{{index<8}}">	
-				<image  src="{{item.url}}" style="width:74.5rpx;height:56rpx"/>
-				<view >{{item.name}}</view>	
-			</view>
-			
-				<navigator class="brands-more" url="">更多品牌></navigator>
-			
-		</view>
-  		<view slot="1" class='car-price-list'>
-			  <view class="car-price-group"  wx:for="{{carPriceList}}" wx:key="index">
-			  	<block class="car-price">{{item}}</block>
-			  </view>
-		  </view>
-  		<view slot="2" class='car-module-list' wx:for="{{carModuleList}}" wx:key="index">
-		  <image class="car-module" src="{{item.url}}"/>
-		</view>
-	</segment>
-</view>
-	<view class="shop-module-group">
-		<view style="padding-bottom:2rpx">
-			<view class="shop-module-header">门店信息</view>
-			<view class="shop-module-body">
-				<view class="shop-container">
-					<view class="shop-info-container">
-						<view  class="shop-city">长春</view> 
-						宝悦行二手车
-					</view>
-					<view class="shop-address">长春经济技术开发区 临河街6373号</view>
-					<view class="shop-tel">0431-84667667</view>
-					<view class="shop-operation-container">
-						<navigator  class="operation-item ">
-							<image  src="./images/tel.png" style="width:80rpx;height:80rpx;" alt="电话"/>
-						</navigator>
-						<navigator  class="operation-item ">
-							<image  src="./images/adrs.png" style="width:80rpx;height:80rpx;" alt="电话"/>
-						</navigator>
-					</view>
-				</view>
-			</view>
-		</view>
-	</view>
-<view class="recommand-car-container">
-	<view wx:for="{{recommandCarList}}" wx:key="id" class="recommand-car-list">		
-		<template is="carlist-thin" data="{{...item}}"></template>
-	</view>
-</view>
+<carfiltermodule branditems="{{carHotBrands}}"/>
+<shopinfomodule />
+<recomcarmodule items="{{recommandCarList}}" />

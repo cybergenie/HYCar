@@ -58,13 +58,50 @@
         </view>
     </view>
     <view class="contactContainer">
-        <view class="contactContent">
+        <view class="contactContentBox">
             <view class="contactTitle">华阳二手车</view>
-            <view class="toShop">进店逛逛
-                <image src="./images/arrow_right.png" class="loanArrowBox" />
+            <view class="toShopIndex">
+                进店逛逛
+                <image src="./images/arrow_right.png" class="toShopIndex_arrowIcon" />
             </view>
-            <view class="toShopInfo"></view>
-            <view class="contactInfo"></view>
+            <view class="contactInfo">
+                <text decode="{{true}}">在售车82&nbsp;&nbsp;已售车2803&nbsp;&nbsp;浏览人数6535</text>
+            </view>
+            <view class="connectContent">
+                <view class="li-item-a">
+                    <view class="address">长春市西环城路6988号 华圣万鑫名车广场</view>
+                    <image class="li-icon" src="./images/address.png" />
+                </view>
+                <view class="li-item-a">
+                    <view class="address">
+                        
+                    <text decode="{{true}}">韩冰&nbsp;&nbsp;13843000004 </text></view>
+                    <image class="li-icon" src="./images/phone.png" />
+                </view>
+            </view>
         </view>
+    </view>
+
+    <view class="floorTabContainer">
+        <segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
+            <view slot="0" class='vehicle-information'>
+               <view class="section">
+                   <text class="title">基本信息</text>
+                   <view class="basic-config-content">
+                       <view class="kv-list">
+
+                       </view>
+                   </view>
+               </view>
+               <view class="section"></view>
+               <view class="section"></view>
+            </view>
+            <view slot="1" class='detailConfigContainer'>
+                we
+            </view>
+            <view slot="2" class='carPhotoContainer'>
+                
+            </view>
+        </segment>
     </view>
 </view>

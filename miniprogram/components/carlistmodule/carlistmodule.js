@@ -4,19 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    ismain:{
-      type:Boolean,
-      value:false
-    },
-    isthin:{
-      type:Boolean,
-      value:false
-    },
-    iswide:{
-      type:Boolean,
-      value:false
-    },
-    car:{
+    items:{
       type:Array,
       value:[]
     }

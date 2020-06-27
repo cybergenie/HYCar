@@ -1,0 +1,87 @@
+/* components/recomcarmodule/recomcarmodule.wxss */
+.recommand-car-container{
+    position: relative;
+    z-index: 0;
+    margin-bottom: 30rpx;
+    margin-top: 30rpx;
+    background-color: #fff;
+}
+.recommend-title{
+    font-size: 52rpx;
+    width: 686rpx;
+    text-align: center;
+    margin: 0 auto;
+    color: #0f111a;
+    line-height: 1;
+    padding: 48rpx 0;
+}
+.recommand-car-item{
+    width: 686rpx;
+    margin-left: 32rpx;
+    margin-right: auto;
+    padding: 32rpx 0;
+    display: flex;
+    position: relative;
+    border: none;
+    background-color: #fff;
+}
+.carImg{
+    width: 240rpx;
+    height: 180rpx;
+    position: relative;
+    overflow: hidden;
+}
+.carRight{
+    position: relative;
+    flex: 1;
+}
+.carContent{
+    margin-left: 24rpx;
+    overflow: hidden;
+    color: #191919;
+    font-size: 24rpx;
+}.carName{
+    font-size: 28rpx;
+    line-height: 1;
+    width: 398rpx;
+    font-weight: 500;
+    padding-top: 12rpx;
+}
+.carModel{
+    line-height: 60rpx;
+    width: 398rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.carInfo{
+    color: #999;
+    height: 24rpx;
+    line-height: 24rpx;
+    display: flex;
+    align-items: center;
+    width: 200%;
+}
+.carInfoText{
+    font-size: 24rpx;
+    color: #999;
+    border-right: 2rpx solid #e6e6e6;
+    padding: 0 4rpx;
+}
+.sale-price-group{
+    position: relative;
+    line-height: 1;
+    font-size: 28rpx;
+    padding-top: 16rpx;
+    display: flex;
+}
+.sale-price{
+    color: #e30000;  
+}
+.guide-price{
+    color: #999999;
+    text-decoration: line-through;
+}
+

@@ -1,0 +1,24 @@
+<!--components/shopinfomodule/shopinfomodule.wxml-->
+	<view class="shop-module-group">
+		<view style="padding-bottom:2rpx">
+			<view class="shop-module-header">门店信息</view>
+			<view class="shop-module-body">
+				<view class="shop-container">
+					<view class="shop-info-container">
+						<view  class="shop-city">长春</view> 
+						宝悦行二手车
+					</view>
+					<view class="shop-address">长春经济技术开发区 临河街6373号</view>
+					<view class="shop-tel">0431-84667667</view>
+					<view class="shop-operation-container">
+						<navigator  class="operation-item ">
+							<image  src="./images/tel.png" style="width:80rpx;height:80rpx;" alt="电话"/>
+						</navigator>
+						<navigator  class="operation-item ">
+							<image  src="./images/adrs.png" style="width:80rpx;height:80rpx;" alt="电话"/>
+						</navigator>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>

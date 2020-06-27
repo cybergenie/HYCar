@@ -30,7 +30,7 @@
         "selectedIconPath": "images/buy_selected.png"
       },
       {
-        "pagePath": "pages/detail/detail",
+        "pagePath": "pages/sale/sale",
         "text": "卖车",
         "iconPath": "images/sale.png",
         "selectedIconPath": "images/sale_selected.png"

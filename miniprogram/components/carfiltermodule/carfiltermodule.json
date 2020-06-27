@@ -1,4 +1,5 @@
 {
+  "component": true,
   "usingComponents": {
     "segment":"/components/segment/segment"
   }

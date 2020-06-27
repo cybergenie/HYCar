@@ -1,5 +1,5 @@
 // miniprogram/pages/detail/detail.js
-import{network} from "network.js"
+import{network} from "../../utils/network.js"
 
 Page({
 
@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    segmentItems: ['车辆信息', '详细配置', '车辆实拍']
   },
 
   /**
@@ -15,23 +15,27 @@ Page({
    */
   onLoad: function (options) {
     var that=this;
+    var type=options.type;
+    var id=options.id;
     network.getCarDetailImages({
+      type:type,
+      id:id,
       success:function(detailCarImgs){
         that.setData({
           detailCarImgs: detailCarImgs
         })
       }
-    })
+    });
 
     network.getCarDetailTitle({
+      type:type,
+      id:id,
       success:function(detailCarInfo){
         that.setData({
           detailCarInfo: detailCarInfo
-        })
-        console.log(detailCarInfo);
+        })        
       }
-    })
-
+    });    
   },
 
   /**

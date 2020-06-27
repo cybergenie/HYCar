@@ -1,0 +1,81 @@
+/* components/carfiltermodule/carfiltermodule.wxss */
+.search-filter-container{
+    background-color: white;
+    margin-bottom: 30rpx;
+  }
+  
+  .car-module-list{
+    width: 187.5rpx; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30rpx 0rpx;
+  }
+  .car-module{
+    width: 116rpx;
+    height: 130rpx;
+  }
+  
+  .car-price-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50rpx 32rpx;
+  
+  }
+  
+  .car-price-group{
+    width: 171.5rpx;
+    padding: 30rpx 0rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+    color: #666666;
+  }
+  .car-price{
+    width: 116rpx;
+    height: 130rpx;   
+  }
+  
+  .car-hotBrands-list{
+    width: 100%;  
+    display: flex; 
+    padding: 30rpx 0rpx; 
+    flex-wrap: wrap;
+    font-size: 24rpx;
+    color: #666666;
+  }
+  .brand-item{
+    padding: 24rpx 0;
+    text-align: center;
+    display: inline-block;
+    width: 25%;
+  }
+  .brand-item-logo-wrapper{
+    height: 56rpx;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .brand-item-logo{
+    height: 100%; 
+    width: 74.66rpx; 
+    vertical-align: middle;
+    border: 0;
+  }
+  .brand-item-name{
+    margin-top: 12rpx;
+    display: inline-block;
+    color: #666666;
+    font-size: 24rpx;
+  }
+  .brands-more{  
+    width: 100%;
+    background-color: #e30000;
+    margin: 32rpx;
+    box-sizing: border-box;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: #fff;
+  }

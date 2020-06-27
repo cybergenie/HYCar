@@ -1,4 +1,4 @@
-import {globalUrls} from "../../utils/urls.js"
+import {globalUrls} from "urls.js"
 
 const network = {
     getCarListByModule: function (params) {       
@@ -41,7 +41,39 @@ const network = {
             }
           }
         })
-      }    
+      },
+      getCarDetailImages: function (params) {
+        console.log(params)
+        var id=params.id;
+          wx.request({
+            url: globalUrls.DetailCarImageslider,
+            data: {  
+                carId:id
+            },
+            success: function (res) {
+              var detailCarImgs = res.data.data.carImgUrlsWithoutScheme; 
+              if(params && params.success){
+                  params.success(detailCarImgs);
+              }
+            }
+          });
+        },
+  
+        getCarDetailTitle: function (params) {   
+          var id=params.id;
+          wx.request({
+            url: globalUrls.DetailCarTitle,
+            data: {  
+                carId:id
+            },
+            success: function (res) {
+              var detailCarInfo= res.data.data; 
+              if(params && params.success){
+                  params.success(detailCarInfo);
+              }
+            }
+          });
+        },    
 }
 
 export {network}

@@ -1,9 +1,0 @@
-<!--components/carlist/carlist.wxml-->
-<view class="car-listview-group">
-	<view class="car-img" src="{{car[0].img}}"></view>
-	<view class="car-info">
-		<view class="car-name"></view>
-		<view class="car-detail"></view>
-		<view class="car-price"></view>
-	</view>
-</view>

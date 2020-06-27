@@ -8,7 +8,7 @@ const globalUrls = {
     DetailCarImageslider:
     "https://wanxin.souche.com/api/dfc/cardetail/car/imageslider.json",
     DetailCarTitle:
-    "https://wanxin.souche.com/api/dfc/cardetail/car/title.json"
+    "https://wanxin.souche.com/api/dfc/cardetail/car/title.json",
 }
 
 export {globalUrls}
