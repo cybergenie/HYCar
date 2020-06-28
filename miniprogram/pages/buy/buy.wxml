@@ -1,7 +1,6 @@
 <!--miniprogram/pages/buy/buy.wxml-->
 <import src="../templates/carListThin/carListThin.wxml" />
 <searchbar isnavigator="true"></searchbar>
-
 	<view wx:for="{{carList}}" wx:key="id" class="buy-group">		
 		<template is="carlist-thin" data="{{...item}}"></template>
 	</view>

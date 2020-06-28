@@ -67,6 +67,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    switchtab:function(){
+      wx.switchTab({
+        url:"/pages/buy/buy"
+      })
+    },
   }
 })

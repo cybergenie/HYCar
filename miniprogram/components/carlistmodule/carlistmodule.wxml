@@ -24,6 +24,6 @@
 		</view>
 </view>
 <view>
-	<navigator class="onsale-more" url="">查看更多车辆></navigator>
+	<view class="onsale-more" bindtap="switchtab">查看更多车辆></view>
 </view>
 </view>
