@@ -1,0 +1,27 @@
+<!-- components/filtertabmodule/filtertabmodule.wxml -->
+<view id="filtrate-container">
+    <view class="filtrate-container">
+        <view class="filtrate-bar">
+            <view class="filtrate-left">
+                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="0" bindtap="tabNav">
+                   <text style="width:120rpx">热门车源</text> 
+                    <i></i>
+                </view>
+                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="1" bindtap="tabNav">
+                    品牌
+                    <i></i>
+                </view>
+                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="2" bindtap="tabNav">
+                    价格
+                    <i></i>
+                </view>
+            </view>
+            <view class="more-item">
+                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="3" bindtap="tabNav">
+                    更多
+                    <i></i>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

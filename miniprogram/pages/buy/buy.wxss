@@ -1,5 +1,30 @@
 /* miniprogram/pages/buy/buy.wxss */
 @import "../templates/carListThin/carListThin.wxss";
+
+.buy-page{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:100vh;
+}
+.header{
+  line-height: 100rpx;
+  flex: 0 0 100rpx;
+}
+.main{
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .buy-group{
   margin: 0rpx 40rpx;
+}
+.main-scroll{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
