@@ -9,8 +9,7 @@
 			<view class="sale-price-group">
 				<view class="sale-price">{{priceWan}}万  </view>
 				<view class="guide-price">{{guidePriceWan}}万</view>
-			</view>
-			
+			</view>			
 		</view>	
 	</view>
 </template>

@@ -1,10 +1,10 @@
 <view class="searchbar">
   <view class="search-navigator-group" wx:if="{{isnavigator}}">
     <navigator url='/pages/searchCar/searchCar' class='search-navigator'>
-      <icon style="width:60rpx" type="search" size="20" color="gray" />
+      <icon style="margin:36rpx 10rpx 0 0" type="search" size="20" color="gray" />
       品牌/车型
     </navigator>
-    <view>
+    <view style="height:60rpx">
       <image src="images/list-wide.png" style="width:60rpx;height:60rpx" />
     </view>
   </view>

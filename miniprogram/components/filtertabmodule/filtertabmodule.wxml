@@ -4,24 +4,35 @@
         <view class="filtrate-bar">
             <view class="filtrate-left">
                 <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="0" bindtap="tabNav">
-                   <text style="width:120rpx">热门车源</text> 
+                    热门车源
                     <i></i>
                 </view>
-                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="1" bindtap="tabNav">
+                <view class="filtrate-item {{currentTab==1?'on':''}}" data-current="1" bindtap="tabNav">
                     品牌
                     <i></i>
                 </view>
-                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="2" bindtap="tabNav">
+                <view class="filtrate-item {{currentTab==2?'on':''}}" data-current="2" bindtap="tabNav">
                     价格
                     <i></i>
                 </view>
             </view>
             <view class="more-item">
-                <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="3" bindtap="tabNav">
+                <view class="filtrate-item {{currentTab==3?'on':''}}" data-current="3" bindtap="tabNav">
                     更多
                     <i></i>
                 </view>
             </view>
+        </view>
+        <view class="filtrate-content-box" style='display:{{displaycar}}'>            
+                <view class="filtrate-content">
+                    <view class="sort-content">
+                        <view class="sort-content-item">热门车源</view>
+                        <view class="sort-content-item">价格最低</view>
+                        <view class="sort-content-item">价格最高</view>
+                        <view class="sort-content-item">里程最短</view>
+                        <view class="sort-content-item">车龄最短</view>
+                    </view>
+                </view>            
         </view>
     </view>
 </view>

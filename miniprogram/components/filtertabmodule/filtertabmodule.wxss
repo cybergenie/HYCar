@@ -1,7 +1,7 @@
 /* components/filtertabmodule/filtertabmodule.wxss */
 .filtrate-container{
     position: relative;
-    z-index: 0;
+    z-index: 9;
 }
 .filtrate-bar{
     height: 88rpx;
@@ -40,9 +40,42 @@
     border-right-color: transparent;
 }
 
+.on {
+    color: #ff571a;   
+ }
+    
+.on i {
+    border: 5px solid #ff571a;
+    border-top-color: #ff571a;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
 .more-item{
     line-height: 88rpx;
     display: flex;
     color: #1a1a1a;
     padding-left: 32rpx;
+}
+.filtrate-content-box{
+    width: 750rpx;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    height: 3000rpx;
+    overflow: hidden;  
+}
+.filtrate-content{
+    width: 750rpx;
+    background-color: #fff;
+    z-index: 999;
+}
+.sort-content-item{
+    font-size: 28rpx;
+    height: 96rpx;
+    color: #1a1a1a;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 32rpx;
+    border: none;    
 }

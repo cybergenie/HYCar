@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "searchbar":"/components/searchbar/searchbar",
-    "filtertabmodule":"/components/filtertabmodule/filtertabmodule"
+    "filtertabmodule":"/components/filtertabmodule/filtertabmodule",
+    "searchcarmodule":"/components/searchcarmodule/searchcarmodule"
   }
 }
