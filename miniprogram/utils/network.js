@@ -73,7 +73,35 @@ const network = {
               }
             }
           });
-        },    
+        }, 
+        
+        //搜索车型
+        getCarList: function (params) {          
+          var sortName=params.sortName;
+          var newCar=params.newCar;
+          var sortType=params.sortType;
+          var carBrand=params.carBrand;
+          var carSeries=params.carSeries;
+          var index=params.index;
+          
+          wx.request({
+            url: globalUrls.SearchCarList,
+            data: {  
+              "sortName":sortName,
+              "newCar":newCar,
+              "sortType":sortType,
+              "carBrand":carBrand,
+              "carSeries":carSeries,
+              "index":index
+            },
+            success: function (res) {
+              var carList = res.data.data.carList;
+              if(params && params.success){
+                  params.success(carList);
+              }
+            }
+          });
+        },
 }
 
 export {network}

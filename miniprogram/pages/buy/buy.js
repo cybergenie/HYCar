@@ -1,4 +1,5 @@
 // miniprogram/pages/buy/buy.js
+import{network} from "../../utils/network.js"
 Page({
 
   /**
@@ -9,40 +10,33 @@ Page({
 
   },
 
-  getCarList: function (keyword) {
-    var that = this;
-    if (!keyword) {
-      keyword = ''
-    }
-    wx.request({
-      url: 'https://wanxin.souche.com/api/search/car.json',
-      data: {
-        "keyword": keyword,
-        "sortName":"smart"
-      },
-      success: function (res) {
-        var carList =  res.data.data.carList;
-        var pageNo = res.data.data.pageNo;
-        var pageNum = res.data.data.pageNum;
-        var pageSize = res.data.data.pageSize;
-        var totalNum = res.data.data.totalNum;
-        console.log(carList)
-        that.setData({
-          carList:carList,
-          pageNo:pageNo,
-          pageNum:pageNum,
-          pageSize:pageSize,
-          totalNum:totalNum
-        })
-      }
+  carListEvent:function(e){
+    var searchCarList = e.detail.carList
+    this.setData({
+      searchCarList:searchCarList,
     })
+    console.log(searchCarList)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCarList()
+    var that = this;
+    network.getCarList({
+      "sortName":'smart',
+        "newCar":0,
+        "sortType":'',
+        "carBrand":'',
+        "carSeries":'',
+        "index":1,
+      success:function(carList){
+        that.setData({
+          searchCarList: carList
+        })  
+        console.log(searchCarList)      
+      }
+    })
   },
 
   /**

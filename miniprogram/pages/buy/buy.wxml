@@ -3,9 +3,9 @@
 <view class="buy-page">
 	<view class="header">
 		<searchbar isnavigator="true"/>
-		<filtertabmodule />
+		<filtertabmodule bind:carListEvent="carListEvent" />
 	</view>
 	<view class="main">
-		<searchcarmodule items="{{carList}}" />		
+		<searchcarmodule  items="{{searchCarList}}" />		
 	</view>
 </view>

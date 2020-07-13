@@ -26,11 +26,12 @@
         <view class="filtrate-content-box" style='display:{{displaycar}}'>            
                 <view class="filtrate-content">
                     <view class="sort-content">
-                        <view class="sort-content-item {{selected_0?'sort-content-item-active':''}}" data-current="0" bindtap="tabitem1Nav">热门车源</view>
-                        <view class="sort-content-item {{selected_1?'sort-content-item-active':''}}" data-current="1" bindtap="tabitem1Nav">价格最低</view>
-                        <view class="sort-content-item {{selected_2?'sort-content-item-active':''}}" data-current="2" bindtap="tabitem1Nav">价格最高</view>
-                        <view class="sort-content-item {{selected_3?'sort-content-item-active':''}}" data-current="3" bindtap="tabitem1Nav">里程最短</view>
-                        <view class="sort-content-item {{selected_4?'sort-content-item-active':''}}" data-current="4" bindtap="tabitem1Nav">车龄最短</view>
+                        <view class="sort-content-item {{selectedCar=='0'?'sort-content-item-active':''}}" data-current="0" bindtap="tabitem1Nav">热门车源</view>
+                        <view class="sort-content-item {{selectedCar=='1'?'sort-content-item-active':''}}" data-current="1" bindtap="tabitem1Nav">最新上架</view>
+                        <view class="sort-content-item {{selectedCar=='2'?'sort-content-item-active':''}}" data-current="2" bindtap="tabitem1Nav">价格最低</view>
+                        <view class="sort-content-item {{selectedCar=='3'?'sort-content-item-active':''}}" data-current="3" bindtap="tabitem1Nav">价格最高</view>
+                        <view class="sort-content-item {{selectedCar=='4'?'sort-content-item-active':''}}" data-current="4" bindtap="tabitem1Nav">里程最短</view>
+                        <view class="sort-content-item {{selectedCar=='5'?'sort-content-item-active':''}}" data-current="5" bindtap="tabitem1Nav">车龄最短</view>
                     </view>
                 </view>            
         </view>

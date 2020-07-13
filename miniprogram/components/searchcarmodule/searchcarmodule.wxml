@@ -1,6 +1,7 @@
 <!-- components/searchcarmodule/searchcarmodule.wxml -->
 <scroll-view class="main-scroll" scroll-y style="height: 100%">
     <view wx:for="{{items}}" wx:key="id" class="buy-group">
+        <navigator url="/pages/detail/detail?type=carlist&id={{item.id}}">
         <view class="car-list-group">
             <image class="car-img" src="{{item.img}}" />
             <view class="car-info">
@@ -15,5 +16,6 @@
                 </view>
             </view>
         </view>
+        </navigator>
     </view>
 </scroll-view>

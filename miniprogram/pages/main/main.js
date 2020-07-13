@@ -33,7 +33,7 @@ Page({
           carList: carList
         })
       }
-    })
+    }),
     network.getBrandList({
       success:function(carBrands){
         that.setData({
@@ -45,7 +45,7 @@ Page({
           carHotBrands: carHotBrands
         })
       }
-    })
+    }),
     network.getCarRecommand({
       success:function(recommandCarList){
         that.setData({
@@ -53,7 +53,6 @@ Page({
         })
       }
     })
-    
   },
 
   /**

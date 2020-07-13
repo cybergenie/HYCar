@@ -63,11 +63,21 @@
     position: absolute;
     height: 3000rpx;
     overflow: hidden;  
+    animation: displaycar 0.5s;
 }
+@keyframes displaycar {
+    from {
+    height: 0px;
+    }    
+    to {
+    height: 576rpx;
+    }
+   }
 .filtrate-content{
     width: 750rpx;
     background-color: #fff;
     z-index: 999;
+    
 }
 .sort-content-item{
     font-size: 28rpx;
