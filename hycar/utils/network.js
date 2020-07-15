@@ -42,8 +42,7 @@ const network = {
           }
         })
       },
-      getCarDetailImages: function (params) {
-        console.log(params)
+      getCarDetailImages: function (params) {        
         var id=params.id;
           wx.request({
             url: globalUrls.DetailCarImageslider,

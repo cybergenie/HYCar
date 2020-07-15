@@ -1,0 +1,9 @@
+<!--hycar/login/login.wxml-->
+<view class="container">
+    <view class="logo-group">
+        <image class="logo" src="./images/logo.jpg" />
+    </view>
+    <view class="tips">需要授权</view>
+    <button class="login-btn" type="primary" open-type="getUserInfo" bind:getuserinfo="onGetUserInfoTap">授权</button>
+    <button class="login-btn" type="default">返回</button>
+</view>

@@ -3,7 +3,8 @@
     "pages/main/main",
     "pages/buy/buy",
     "pages/sale/sale",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/login/login"
   ],
   "window": {
     "navigationStyle": "default",
