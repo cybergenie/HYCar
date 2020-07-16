@@ -16,9 +16,11 @@ Page({
 
   },
 
-  onSaleCarTap:function(env){
+  onAddCarTap:function(env){
     if(app.is_login()){
-      console.log('跳转页面')
+      wx.navigateTo({
+        url:"../addcar/addcar"
+      })
     }else{
       wx.navigateTo({
         url:"../login/login"

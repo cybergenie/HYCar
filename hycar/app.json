@@ -4,7 +4,8 @@
     "pages/buy/buy",
     "pages/sale/sale",
     "pages/detail/detail",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/addcar/addcar"
   ],
   "window": {
     "navigationStyle": "default",

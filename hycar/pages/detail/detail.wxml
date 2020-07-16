@@ -51,7 +51,7 @@
                     贷款
                 </view>
                 <view class="loanAdd">
-                    <view class="planes"> 具体方案请咨询销售顾问</view>                    
+                    <view class="planes" bind:tap="onPhoneCallTap"> 具体方案请咨询销售顾问</view>                    
                     <image src="./images/arrow_right.png" class="loanArrowBox" />                    
                 </view>
             </view>
@@ -60,7 +60,7 @@
     <view class="contactContainer">
         <view class="contactContentBox">
             <view class="contactTitle">华阳二手车</view>
-            <view class="toShopIndex">
+            <view class="toShopIndex" bind:tap="onIntoShopTap">
                 进店逛逛
                 <image src="./images/arrow_right.png" class="toShopIndex_arrowIcon" />
             </view>
@@ -68,14 +68,14 @@
                 <text decode="{{true}}">在售车82&nbsp;&nbsp;已售车2803&nbsp;&nbsp;浏览人数6535</text>
             </view>
             <view class="connectContent">
-                <view class="li-item-a">
-                    <view class="address">长春市西环城路6988号 华圣万鑫名车广场</view>
+                <view class="li-item-a" bind:tap="onLocationTap">
+                    <view class="address">长春经济技术开发区 临河街6373号</view>
                     <image class="li-icon" src="./images/address.png" />
                 </view>
-                <view class="li-item-a">
+                <view class="li-item-a" bind:tap="onPhoneCallTap">
                     <view class="address">
                         
-                    <text decode="{{true}}">韩冰&nbsp;&nbsp;13843000004 </text></view>
+                    <text decode="{{true}}">韩冰&nbsp;&nbsp;13100000000 </text></view>
                     <image class="li-icon" src="./images/phone.png" />
                 </view>
             </view>

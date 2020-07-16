@@ -10,13 +10,13 @@
 					</view>
 					<view class="shop-address">长春经济技术开发区 临河街6373号</view>
 					<view class="shop-tel">0431-84667667</view>
-					<view class="shop-operation-container">
-						<navigator  class="operation-item ">
+					<view class="shop-operation-container" >
+						<view  class="operation-item " bind:tap="onPhoneCallTap">
 							<image  src="./images/tel.png" style="width:80rpx;height:80rpx;" alt="电话"/>
-						</navigator>
-						<navigator  class="operation-item ">
-							<image  src="./images/adrs.png" style="width:80rpx;height:80rpx;" alt="电话"/>
-						</navigator>
+						</view>
+						<view  class="operation-item " bind:tap="onLocationTap">
+							<image  src="./images/adrs.png" style="width:80rpx;height:80rpx;" alt="地址"/>
+						</view>
 					</view>
 				</view>
 			</view>

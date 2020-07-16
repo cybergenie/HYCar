@@ -31,7 +31,7 @@
                 </view>
             </view>
             <view>
-                <view class="onsale-more" bind:tap="onSaleCarTap">我要卖车</view>
+                <view class="onsale-more" bind:tap="onAddCarTap">我要卖车</view>
             </view>
         </view>
     </view>
