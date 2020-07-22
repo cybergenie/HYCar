@@ -1,107 +1,100 @@
 <!-- miniprogram/pages/detail/detail.wxml -->
 <view id="">
-    <view class="image-slider">
-        <swiper class="swiper-container" autoplay="{{true}}" indicator-active-color="#007aff">
-            <block wx:for="{{detailCarImgs}}" wx:key="index">
-                <swiper-item>
-                    <image src="{{item}}" style="width:100%;height:100%" />
-                </swiper-item>
-            </block>
-        </swiper>
+  <view class="image-slider">
+    <swiper class="swiper-container" autoplay="{{true}}" indicator-active-color="#007aff">
+      <block wx:for="{{detailCarImgs}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" style="width:100%;height:100%" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="titleContainer">
+    <view class="titleContent">
+      <view class="carName">{{detailCarInfo.title}}</view>
+      <view class="carDetail">
+        {{detailCarInfo.simpleInfo.saleTime}}
+        <text decode="{{true}}">&nbsp;&nbsp;</text>
+        {{detailCarInfo.simpleInfo.distanceWan}}万公里
+        <text decode="{{true}}">&nbsp;&nbsp;</text>
+        {{detailCarInfo.simpleInfo.address}}
+        <text decode="{{true}}">&nbsp;&nbsp;</text>
+        {{detailCarInfo.simpleInfo.standard}}
+      </view>
+      <view class="carPrice">{{detailCarInfo.exhibitionPriceWan}}万</view>
+      <view class="newCarPrice">
+        新车含税价：{{detailCarInfo.newCarPriceOfTaxWan}}万，省{{detailCarInfo.saveMoneyWan}}万
+      </view>
+      <view class="btnStyle">
+        <view class="priceNofication">降价通知</view>
+      </view>
     </view>
-    <view class="titleContainer">
-        <view class="titleContent">
-            <view class="carName">{{detailCarInfo.title}}</view>
-            <view class="carDetail">
-                {{detailCarInfo.simpleInfo.saleTime}}
-                <text decode="{{true}}">&nbsp;&nbsp;</text>
-                {{detailCarInfo.simpleInfo.distanceWan}}万公里
-                <text decode="{{true}}">&nbsp;&nbsp;</text>
-                {{detailCarInfo.simpleInfo.address}}
-                <text decode="{{true}}">&nbsp;&nbsp;</text>
-                {{detailCarInfo.simpleInfo.standard}}
-            </view>
-            <view class="carPrice">{{detailCarInfo.exhibitionPriceWan}}万</view>
-            <view class="newCarPrice">
-                新车含税价：{{detailCarInfo.newCarPriceOfTaxWan}}万，省{{detailCarInfo.saveMoneyWan}}万
-            </view>
-            <view class="btnStyle">
-                <view class="priceNofication">降价通知</view>
-            </view>
+    <view class="couponContainer">
+      <view class="couponLabel">领卷</view>
+      <view class="couponContent">
+        <view class="couponBox">
+          <image src="./images/coupon_header.png" class="couponImg" />
+          <view class="couponInfo">满350000减1000</view>
+          <image src="./images/coupon_tail.png" class="couponImg" />
         </view>
-        <view class="couponContainer">
-            <view class="couponLabel">领卷</view>
-            <view class="couponContent">
-                <view class="couponBox">
-                    <image src="./images/coupon_header.png" class="couponImg" />
-                    <view class="couponInfo">满350000减1000</view>
-                    <image src="./images/coupon_tail.png" class="couponImg" />
-                </view>
-                <view class="arrowBox">
-                    <image src="./images/arrow_right.png" class="arrowRight" />
-                </view>
-            </view>
+        <view class="arrowBox">
+          <image src="./images/arrow_right.png" class="arrowRight" />
         </view>
+      </view>
     </view>
-    <view class="loanContainer">
-        <view class="loanContent">
-            <view class="loanTitleContainer">
-                <view class="loanTitle">
-                    <image src="./images/wallet.png" class="loanImg" />
-                    贷款
-                </view>
-                <view class="loanAdd">
-                    <view class="planes" bind:tap="onPhoneCallTap"> 具体方案请咨询销售顾问</view>                    
-                    <image src="./images/arrow_right.png" class="loanArrowBox" />                    
-                </view>
-            </view>
+  </view>
+  <view class="loanContainer">
+    <view class="loanContent">
+      <view class="loanTitleContainer">
+        <view class="loanTitle">
+          <image src="./images/wallet.png" class="loanImg" />
+          贷款
         </view>
-    </view>
-    <view class="contactContainer">
-        <view class="contactContentBox">
-            <view class="contactTitle">华阳二手车</view>
-            <view class="toShopIndex" bind:tap="onIntoShopTap">
-                进店逛逛
-                <image src="./images/arrow_right.png" class="toShopIndex_arrowIcon" />
-            </view>
-            <view class="contactInfo">
-                <text decode="{{true}}">在售车82&nbsp;&nbsp;已售车2803&nbsp;&nbsp;浏览人数6535</text>
-            </view>
-            <view class="connectContent">
-                <view class="li-item-a" bind:tap="onLocationTap">
-                    <view class="address">长春经济技术开发区 临河街6373号</view>
-                    <image class="li-icon" src="./images/address.png" />
-                </view>
-                <view class="li-item-a" bind:tap="onPhoneCallTap">
-                    <view class="address">
-                        
-                    <text decode="{{true}}">韩冰&nbsp;&nbsp;13100000000 </text></view>
-                    <image class="li-icon" src="./images/phone.png" />
-                </view>
-            </view>
+        <view class="loanAdd">
+          <view class="planes" bind:tap="onPhoneCallTap">具体方案请咨询销售顾问</view>
+          <image src="./images/arrow_right.png" class="loanArrowBox" />
         </view>
+      </view>
     </view>
-
-    <view class="floorTabContainer">
-        <segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
-            <view slot="0" class='vehicle-information'>
-               <view class="section">
-                   <text class="title">基本信息</text>
-                   <view class="basic-config-content">
-                       <view class="kv-list">
-
-                       </view>
-                   </view>
-               </view>
-               <view class="section"></view>
-               <view class="section"></view>
-            </view>
-            <view slot="1" class='detailConfigContainer'>
-                we
-            </view>
-            <view slot="2" class='carPhotoContainer'>
-                
-            </view>
-        </segment>
+  </view>
+  <view class="contactContainer">
+    <view class="contactContentBox">
+      <view class="contactTitle">华阳二手车</view>
+      <view class="toShopIndex" bind:tap="onIntoShopTap">
+        进店逛逛
+        <image src="./images/arrow_right.png" class="toShopIndex_arrowIcon" />
+      </view>
+      <view class="contactInfo">
+        <text decode="{{true}}">在售车82&nbsp;&nbsp;已售车2803&nbsp;&nbsp;浏览人数6535</text>
+      </view>
+      <view class="connectContent">
+        <view class="li-item-a" bind:tap="onLocationTap">
+          <view class="address">长春经济技术开发区 临河街6373号</view>
+          <image class="li-icon" src="./images/address.png" />
+        </view>
+        <view class="li-item-a" bind:tap="onPhoneCallTap">
+          <view class="address">
+            <text decode="{{true}}">韩冰&nbsp;&nbsp;13100000000</text>
+          </view>
+          <image class="li-icon" src="./images/phone.png" />
+        </view>
+      </view>
     </view>
+  </view>
+  <view class="floorTabContainer">
+    <segment items="{{segmentItems}}" defaultIndex="0" binditemchanged="onSegmentItemChanged">
+      <view slot="0" class='vehicle-information'>
+        <view class="section">
+          <text class="title">基本信息</text>
+          <view class="basic-config-content">
+            <view class="kv-list"></view>
+          </view>
+        </view>
+        <view class="section"></view>
+        <view class="section"></view>
+      </view>
+      <view slot="1" class='detailConfigContainer'>we</view>
+      <view slot="2" class='carPhotoContainer'></view>
+    </segment>
+  </view>
 </view>

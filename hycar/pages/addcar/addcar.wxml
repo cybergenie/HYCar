@@ -1,2 +1,16 @@
-<!--hycar/pages/addcar/addcar.wxml-->
-<text>hycar/pages/addcar/addcar.wxml</text>
+<!-- hycar/pages/addcar/addcar.wxml -->
+<view class="container">
+    <form bindsubmit="onSubmitEvent">        
+        <view class="image-list-group">
+            <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+                <image src="{{item}}" />
+                <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
+            </view>
+            <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+                <view >+</view>
+            </view>
+        </view>
+        <textarea name="content" class="textarea" placeholder="请输入您的心情"></textarea>
+        <button form-type="submit" type="primary" class="submit-btn">发布</button>
+    </form>
+</view>

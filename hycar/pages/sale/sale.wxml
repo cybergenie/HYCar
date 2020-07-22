@@ -1,39 +1,38 @@
 <!-- miniprogram/pages/sell/sell.wxml -->
 <view class="sell-car">
-    <view class="moudle-sell-car">
-        <view class="sell-title">我要卖车</view>
-        <view>
-            <view class="sub-list">
-                <view class="sub-list-item">
-                    <label class="sub-list-hd">
-                        联系方式
-                        <label style="color:red">*</label>
-                    </label>
-                    <input type="text" class="sub-list-bd" />
-                </view>
-                <view class="sub-list-item">
-                    <label class="sub-list-hd">
-                        姓名
-                        <label style="color:red">*</label>
-                    </label>
-                    <input type="text" class="sub-list-bd" />
-                </view>
-                <view class="sub-list-item">
-                    <label class="sub-list-hd">
-                        车辆描述
-                        <label style="color:red">*</label>
-                    </label>
-                    <input type="text" class="sub-list-bd" />
-                </view>
-                <view class="sub-list-item">
-                    <label class="sub-list-hd">所在城市</label>
-                    <input type="text" class="sub-list-bd" />
-                </view>
-            </view>
-            <view>
-                <view class="onsale-more" bind:tap="onAddCarTap">我要卖车</view>
-            </view>
+  <view class="moudle-sell-car">
+    <view class="sell-title">我要卖车</view>
+    <view>
+      <view class="sub-list">
+        <view class="sub-list-item">
+          <label class="sub-list-hd">
+            联系方式
+            <label style="color:red">*</label>
+          </label>
+          <input type="text" class="sub-list-bd" />
         </view>
+        <view class="sub-list-item">
+          <label class="sub-list-hd">
+            姓名
+            <label style="color:red">*</label>
+          </label>
+          <input type="text" class="sub-list-bd" />
+        </view>
+        <view class="sub-list-item">
+          <label class="sub-list-hd">
+            车辆描述
+            <label style="color:red">*</label>
+          </label>
+          <input type="text" class="sub-list-bd" />
+        </view>
+        <view class="sub-list-item">
+          <label class="sub-list-hd">所在城市</label>
+          <input type="text" class="sub-list-bd" />
+        </view>
+      </view>
+      <view>
+        <view class="onsale-more" bind:tap="onAddCarTap">我要卖车</view>
+      </view>
     </view>
+  </view>
 </view>
->
