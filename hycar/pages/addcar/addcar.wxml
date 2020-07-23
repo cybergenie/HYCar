@@ -1,16 +1,62 @@
 <!-- hycar/pages/addcar/addcar.wxml -->
 <view class="container">
-    <form bindsubmit="onSubmitEvent">        
-        <view class="image-list-group">
-            <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-                <image src="{{item}}" />
-                <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
-            </view>
-            <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-                <view >+</view>
-            </view>
-        </view>
-        <textarea name="content" class="textarea" placeholder="请输入您的心情"></textarea>
-        <button form-type="submit" type="primary" class="submit-btn">发布</button>
-    </form>
+  <form bindsubmit="onSubmitEvent">
+    <view class="car-info-group">
+      <view class="car-info">
+        <label class="car-info-lb">车系名称</label>
+        <input name="seriesName" type="text" class="car-info-inut" />
+      </view>
+      <view class="car-info">
+        <label class="car-info-lb">简称</label>
+        <input name="simpleModelName" type="text" class="car-info-inut" />
+      </view>
+      <view class="car-info">
+        <label class="car-info-lb">名称</label>
+        <input name="modelName" type="text" class="car-info-inut" />
+      </view>
+      <view class="car-info">
+        <label class="car-info-lb">价格</label>
+        <input name="price" type="text" class="car-info-inut" />
+      </view>
+      <view class="car-info">
+        <label class="car-info-lb">新车价格</label>
+        <input name="newPriceTax" type="text" class="car-info-inut" />
+      </view>
+      <view class="car-info">
+        <label class="car-info-lb">城市</label>
+        <input name="city" type="text" class="car-info-inut" />
+      </view>
+            <view class="car-info">
+        <label class="car-info-lb">颜色</label>
+        <input name="color" type="text" class="car-info-inut" />
+      </view>
+                  <view class="car-info">
+        <label class="car-info-lb">排量</label>
+        <input name="engineSize" type="text" class="car-info-inut" />
+      </view>
+                        <view class="car-info">
+        <label class="car-info-lb">上牌时间</label>
+        <input name="firstLicensePlateDate" type="text" class="car-info-inut" />
+      </view>
+                              <view class="car-info">
+        <label class="car-info-lb">行驶里程</label>
+        <input name="mileage" type="text" class="car-info-inut" />
+      </view>
+            
+                              <view class="car-info">
+        <label class="car-info-lb">汽车类型</label>
+        <input name="type" type="text" class="car-info-inut" />
+      </view>
+    </view>
+    <view class="image-list-group">
+      <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+        <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
+        <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
+      </view>
+      <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+        <view>+</view>
+      </view>
+    </view>
+    <button form-type="submit" type="primary" class="submit-btn">发布</button>
+  </form>
 </view>

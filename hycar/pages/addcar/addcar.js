@@ -50,6 +50,16 @@ Page({
      }
   },
 
+  onImageTap:function(env)
+  {
+    const that = this;
+    const index = env.target.dataset.index;
+    wx.previewImage({
+      urls:that.data.tempImages,
+      current:that.data.tempImages[index]
+    })
+  },
+
   submitCar:function(car){
     wx.cloud.callFunction({
       name:"submitcar",

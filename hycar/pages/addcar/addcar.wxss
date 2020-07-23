@@ -2,11 +2,7 @@
 .container{
   padding:40rpx 20rpx ;
 }
-.textarea{
-  font-size: 28rpx;
-  width: 100%;
-  height: 200rpx;
-}
+
 .submit-btn{  
   width: 100%;
   margin-top: 40rpx;
