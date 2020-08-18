@@ -15,7 +15,6 @@ Page({
   onLoad: function (options) {
 
   },
-
   onAddCarTap:function(env){
     if(app.is_login()){
       wx.navigateTo({

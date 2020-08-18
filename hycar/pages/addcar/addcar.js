@@ -113,6 +113,66 @@ Page({
     this.setData({
       tempImages:tempImages
     })
-  }
+  },
+
+  
+    /**
+   * 城市选择确认
+   */
+  cityPickerOnSureClick: function (e) {
+    console.log('cityPickerOnSureClick');
+    console.log(e);
+    this.setData({
+      city: e.detail.valueName[1],
+      cityPickerValue: e.detail.valueCode,
+      cityPickerIsShow: false,
+    });
+
+  },
+  /**
+   * 城市选择取消
+   */
+  cityPickerOnCancelClick: function (event) {
+    console.log('cityPickerOnCancelClick');
+    console.log(event);
+    this.setData({
+      cityPickerIsShow: false,
+    });
+  },
+
+
+  showCityPicker() {
+    // this.data.cityPicker.show()
+    this.setData({
+      cityPickerIsShow: true,
+    });
+  },
+
+  /**
+   * 汽车类型选择确认
+   */
+  carTypePickerOnSureClick: function (e) {
+    this.setData({
+      carType: e.detail.valueName[0],      
+      carTypePickerIsShow: false,
+    });
+
+  },
+  /**
+   * 汽车类型选择取消
+   */
+  carTypePickerOnCancelClick: function (event) {    
+    this.setData({
+      carTypePickerIsShow: false,
+    });
+  },
+
+
+  showCarTypePicker() {
+    // this.data.cityPicker.show()
+    this.setData({
+      carTypePickerIsShow: true,
+    });
+  },
   
 })

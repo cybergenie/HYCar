@@ -1,0 +1,21 @@
+<view wx:if="{{showPicker}}" class="carType-picker">
+    <view class="carType-picker-mask" catchtouchstart="onTouchmask"></view>
+    <view class="carType-picker-content" catchtouchstart="onTouchmask">
+        <view class='carType-picker-content-top' catchtouchstart="onTouchmask">
+            <view class="carType-picker-content-cancel" hover-class="hover-class" catchtouchend="onCancelClick">
+                取消
+            </view>
+            <view class="carType-picker-content-sure" hover-class="hover-class" catchtouchend="onSureClick">
+                确认
+            </view>
+        </view>
+        <view class="carType-picker-content-line" catchtouchstart="onTouchmask"></view>
+        <view class="carType-picker-content-center" catchtouchstart="onTouchmask">
+            <picker-view class="carType-picker-content-item" indicator-style="height: 70rpx;" value="{{tempCarTypePos}}" bindchange="type_onChange">
+                <picker-view-column>
+                    <view wx:for="{{carTypes}}" wx:key="{{item.type_code}}" style="height: 70rpx; text-align:center; font-size: 36rpx; line-height:70rpx; color:#353535;">{{item.type_name}}</view>
+                </picker-view-column>
+            </picker-view>            
+        </view>
+    </view>
+</view>

@@ -3,49 +3,92 @@
   <form bindsubmit="onSubmitEvent">
     <view class="car-info-group">
       <view class="car-info">
-        <label class="car-info-lb">车系名称</label>
-        <input name="seriesName" type="text" class="car-info-inut" />
+        <label class="car-info-lb">
+          车系名称
+          <label style="color:red">*</label>
+        </label>
+        <input name="seriesName" type="text" class="car-info-inut" placeholder='输入品牌/车型' placeholder-class="textholder"/>
       </view>
       <view class="car-info">
-        <label class="car-info-lb">简称</label>
+        <label class="car-info-lb">
+          简称
+          <label style="color:red">*</label>
+        </label>
         <input name="simpleModelName" type="text" class="car-info-inut" />
       </view>
       <view class="car-info">
-        <label class="car-info-lb">名称</label>
+        <label class="car-info-lb">
+          名称
+          <label style="color:red">*</label>
+        </label>
         <input name="modelName" type="text" class="car-info-inut" />
       </view>
       <view class="car-info">
-        <label class="car-info-lb">价格</label>
+        <label class="car-info-lb">
+          价格
+          <label style="color:red">*</label>
+        </label>
         <input name="price" type="text" class="car-info-inut" />
       </view>
       <view class="car-info">
-        <label class="car-info-lb">新车价格</label>
+        <label class="car-info-lb">
+          新车价格
+          <label style="color:red">*</label>
+        </label>
         <input name="newPriceTax" type="text" class="car-info-inut" />
       </view>
-      <view class="car-info">
+      <view class="car-info" bindtap="showCityPicker">
         <label class="car-info-lb">城市</label>
-        <input name="city" type="text" class="car-info-inut" />
+        <view class="arrowBox">
+          <label name="cityName" style="padding-right:20rpx">{{city}}</label>
+          <image src="./images/arrow_right.png" class="arrowRight" />
+        </view>
       </view>
-            <view class="car-info">
+      <view class="car-info">
         <label class="car-info-lb">颜色</label>
         <input name="color" type="text" class="car-info-inut" />
       </view>
-                  <view class="car-info">
+      <view class="car-info">
         <label class="car-info-lb">排量</label>
         <input name="engineSize" type="text" class="car-info-inut" />
       </view>
-                        <view class="car-info">
+      <view class="car-info">
         <label class="car-info-lb">上牌时间</label>
         <input name="firstLicensePlateDate" type="text" class="car-info-inut" />
       </view>
-                              <view class="car-info">
+      <view class="car-info">
         <label class="car-info-lb">行驶里程</label>
         <input name="mileage" type="text" class="car-info-inut" />
       </view>
-            
-                              <view class="car-info">
-        <label class="car-info-lb">汽车类型</label>
-        <input name="type" type="text" class="car-info-inut" />
+      <view class="car-info" bindtap="showCarTypePicker">
+        <label class="car-info-lb">
+          汽车类型
+          <label style="color:red">*</label>
+        </label>
+        <view class="arrowBox">
+          <label name="type" style="padding-right:20rpx">{{carType}}</label>
+          <image src="./images/arrow_right.png" class="arrowRight" />
+        </view>
+      </view>
+      <view class="car-info" bindtap="onDescriptionTap">
+        <label class="car-info-lb">
+          车辆描述
+          <label style="color:red">*</label>
+        </label>
+        <view class="arrowBox">
+          <label name="carDescription" style="padding-right:20rpx">{{carDescription}}</label>
+          <image src="./images/arrow_right.png" class="arrowRight" />
+        </view>
+      </view>
+      <view class="car-info" bindtap="onCarPictureTap">
+        <label class="car-info-lb">
+          车辆图片
+          <label style="color:red">*</label>
+        </label>
+        <view class="arrowBox">
+          <label name="carPictures" style="padding-right:20rpx">{{carPictures}}</label>
+          <image src="./images/arrow_right.png" class="arrowRight" />
+        </view>
       </view>
     </view>
     <view class="image-list-group">
@@ -57,6 +100,10 @@
         <view>+</view>
       </view>
     </view>
-    <button form-type="submit" type="primary" class="submit-btn">发布</button>
+    <button form-type="submit" type="primary" class="submit-btn" style="width:100%;background-color: #e30000;height: 88rpx;font-size: 32rpx;">
+      发布
+    </button>
   </form>
+  <city-picker id="city-picker" value="{{cityPickerValue}}" isShow="{{cityPickerIsShow}}" bindsureclick="cityPickerOnSureClick" bindcancelclick="cityPickerOnCancelClick" />
+  <cartype-picker id="cartype-picker" value="{{carTypePickerValue}}" isShow="{{carTypePickerIsShow}}" bindsureclick="carTypePickerOnSureClick" bindcancelclick="carTypePickerOnCancelClick" />
 </view>

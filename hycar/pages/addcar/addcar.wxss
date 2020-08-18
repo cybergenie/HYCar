@@ -3,10 +3,49 @@
   padding:40rpx 20rpx ;
 }
 
-.submit-btn{  
+.car-info-group{
+  font-size:medium;
+  overflow: hidden;
+  position: relative;
+}
+.car-info{
+  color: #1a1a1a;
+  padding: 0 32rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.car-info-lb{
+  padding: 20rpx 0;
+  width: 192rpx;
+  font-size: 28rpx;
+  display: inline-block;
+  line-height: 36rpx;
+  margin-right: 32rpx;
+  word-break: break-all;
+}
+.car-info-inut{
+  padding: 20rpx 0;
   width: 100%;
+  font-size: 28rpx;
+  text-align: left;
+  align-items: baseline;
+  width: 100%;  
+  line-height: 36rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.textholder{
+  position: absolute;
+  top: -5rpx;
+}
+
+.submit-btn{  
+  margin-left: 0rpx;  
   margin-top: 40rpx;
 }
+
 .container .image-list-group{
   margin-top: 20rpx;
   display: flex;
@@ -44,4 +83,17 @@
 }
 .image-list-group .add-image-btn view{
   margin-top: -20rpx;
+}
+
+.arrowBox{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 1rpx;
+  right: 32rpx;
+}
+.arrowRight{
+  width: 15rpx;
+  height: 26rpx;
 }
