@@ -1,18 +1,19 @@
 <!-- components/searchcarmodule/searchcarmodule.wxml -->
+<wxs src="../../utils/util.wxs" module="util" />
 <scroll-view class="main-scroll" scroll-y style="height: 100%">
     <view wx:for="{{items}}" wx:key="id" class="buy-group">
-        <navigator url="/pages/detail/detail?type=carlist&id={{item.id}}">
+        <navigator url="/pages/detail/detail?type=carlist&id={{item._id}}">
         <view class="car-list-group">
-            <image class="car-img" src="{{item.img}}" />
+            <image class="car-img" src="{{item.images[0]}}" />
             <view class="car-info">
                 <view class="car-name-thin">{{item.seriesName}}</view>
                 <view class="car-name-thin">{{item.simpleModelName}}</view>
                 <view class="car-detail-thin">
-                    {{item.firstLicensePlateDate}}| {{item.mileageWan}}公里| {{item.cityName}}
+                    {{util.timeFormat(item.firstLicensePlateDate)}}| {{item.mileage}}公里| {{item.cityName}}
                 </view>
                 <view class="sale-price-group">
-                    <view class="sale-price">{{item.priceWan}}万</view>
-                    <view class="guide-price">{{item.guidePriceWan}}万</view>
+                    <view class="sale-price">{{item.price}}万</view>
+                    <view class="guide-price">{{item.newPriceTax}}万</view>
                 </view>
             </view>
         </view>

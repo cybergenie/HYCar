@@ -75,7 +75,7 @@
 .car-info-price{
     color: #e30000;
     white-space: nowrap;
-    font-size: 24rpx;
+    font-size: 28rpx;
     line-height: 38rpx;
 }
 .onsale-more{ 

@@ -1,5 +1,6 @@
 // components/filtertabmodule/filtertabmodule.js
 import { network } from "../../utils/network.js"
+const db = wx.cloud.database();
 Component({
   /**
    * 组件的属性列表
@@ -50,99 +51,57 @@ Component({
       var that = this;
       var current = e.target.dataset.current;
       if (current == "0") {
-        network.getCarList({
-          "sortName": 'smart',
-          "newCar": 0,
-          "sortType": '',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
+          db.collection("carlist").where({status:"7001"}).limit(10).get().then(res => {     
+            const carList = res.data;       
             that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
-        })
+              carList:carList
+            });
+            that.triggerEvent('carListEvent', { carList: carList })
+          })        
       }
       if (current == "1") {
-        network.getCarList({
-          "sortName": '',
-          "newCar": 0,
-          "sortType": '',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
-            that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
-        })
+        db.collection("carlist").orderBy('createTime', 'desc').limit(10).get().then(res => {     
+          const carList = res.data;       
+          that.setData({
+            carList:carList
+          });
+          that.triggerEvent('carListEvent', { carList: carList })
+        }) 
       }
       if (current == "2") {
-        network.getCarList({
-          "sortName": 'price',
-          "newCar": 0,
-          "sortType": 'asc',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
-            that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
-        })
+        db.collection("carlist").orderBy('price', 'asc').limit(10).get().then(res => {     
+          const carList = res.data;       
+          that.setData({
+            carList:carList
+          });
+          that.triggerEvent('carListEvent', { carList: carList })
+        }) 
       }
       if (current == "3") {
-        network.getCarList({
-          "sortName": 'price',
-          "newCar": 0,
-          "sortType": 'desc',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
-            that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
-        })
+        db.collection("carlist").orderBy('price', 'desc').limit(10).get().then(res => {     
+          const carList = res.data;       
+          that.setData({
+            carList:carList
+          });
+          that.triggerEvent('carListEvent', { carList: carList })
+        }) 
       }
       if (current == "4") {
-        network.getCarList({
-          "sortName": 'mile',
-          "newCar": 0,
-          "sortType": 'asc',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
-            that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
-        })
+        db.collection("carlist").orderBy('mileage', 'asc').limit(10).get().then(res => {     
+          const carList = res.data;       
+          that.setData({
+            carList:carList
+          });
+          that.triggerEvent('carListEvent', { carList: carList })
+        }) 
       }
       if (current == "5") {
-        network.getCarList({
-          "sortName": 'licensePlateDate',
-          "newCar": 0,
-          "sortType": 'desc',
-          "carBrand": '',
-          "carSeries": '',
-          "index": 1,
-          success: function (carList) {
-            that.setData({
-              carList: carList
-            }),
-              that.triggerEvent('carListEvent', { carList: carList })
-          }
+        db.collection("carlist").orderBy('firstLicensePlateDate', 'desc').limit(10).get().then(res => {     
+          const carList = res.data;       
+          that.setData({
+            carList:carList
+          });
+          that.triggerEvent('carListEvent', { carList: carList })
         })
       }
 

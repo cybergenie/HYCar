@@ -1,5 +1,5 @@
 // miniprogram/pages/main/main.js
-import{network} from "../../utils/network.js"
+const db = wx.cloud.database();
 
 Page({
 
@@ -27,80 +27,53 @@ Page({
    */
   onLoad: function (options) {
     var that=this;
-    network.getCarListByModule({
-      success:function(carList){
-        that.setData({
-          carList: carList
-        })
-      }
-    }),
-    network.getBrandList({
-      success:function(carBrands){
-        that.setData({
-          carBrands: carBrands
-        })
-      },
-      success:function(carHotBrands){
-        that.setData({
-          carHotBrands: carHotBrands
-        })
-      }
-    }),
-    network.getCarRecommand({
-      success:function(recommandCarList){
-        that.setData({
-          recommandCarList: recommandCarList
-        })
-      }
+    that.loadCarList();
+    that.loadRecommandList();
+    // network.getCarListByModule({
+    //   success:function(carList){
+    //     that.setData({
+    //       carList: carList
+    //     })
+    //   }
+    // }),
+    // network.getBrandList({
+    //   success:function(carBrands){
+    //     that.setData({
+    //       carBrands: carBrands
+    //     })
+    //   },
+    //   success:function(carHotBrands){
+    //     that.setData({
+    //       carHotBrands: carHotBrands
+    //     })
+    //   }
+    // }),
+    // network.getCarRecommand({
+    //   success:function(recommandCarList){
+    //     that.setData({
+    //       recommandCarList: recommandCarList
+    //     })
+    //   }
+    // })
+  },
+//需要修改云开发数据库权限
+  loadCarList:function(){
+    var that = this;
+    db.collection("carlist").limit(10).get().then(res => {     
+      const carList = res.data;       
+      that.setData({
+        carList:JSON.parse(JSON.stringify(carList))
+      });      
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  loadRecommandList:function(){
+    var that = this;
+    db.collection("carlist").where({status:"7001"}).limit(10).get().then(res => {     
+      const recommandCarList = res.data;       
+      that.setData({
+        recommandCarList:JSON.parse(JSON.stringify(recommandCarList))
+      });
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

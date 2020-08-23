@@ -1,6 +1,4 @@
 <!-- miniprogram/pages/main/main.wxml -->
-<import src="../templates/carListMain/carlistmain.wxml" />
-<import src="../templates/carListThin/carListThin.wxml" />
 <view class="title-group">
 	<image class="title" src="./images/title.png" style="width:144rpx;height:72rpx;margin:0rpx 24rpx" />
 	<view style="padding-left:20rpx">华阳二手车</view>
@@ -10,7 +8,7 @@
 </view>
 <searchbar ismain="true" bindonClickSubmit="onClickSearchSubmit"></searchbar>
 <view class="onsale-group">
-	<carlistmodule items="{{carList}}" />	
+	<carlistmodule items="{{carList}}" />
 </view>
 <view class="swiper-group">
 <swiper class="swiper-box" indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#007aff">

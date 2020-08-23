@@ -1,0 +1,19 @@
+
+var timeFormat = function (time) {   
+  if(time==null || time ==undefined || time=="")
+    {
+        return ""
+    }
+  // time = time.replace("T", " ");
+  // var date = time ? getDate(time.replace(getRegExp('-', 'g'), '/')) : getDate();
+  var date = getDate(time);
+  var timeStr = ""; 
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;    
+    timeStr = year + "年" + month + "月";  
+  return timeStr;
+}
+
+module.exports = {
+  timeFormat: timeFormat
+}

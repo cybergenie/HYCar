@@ -1,25 +1,26 @@
 <!--components/recomcarmodule/recomcarmodule.wxml-->
+<wxs src="../../utils/util.wxs" module="util" />
 <view class="recommand-car-container">
     <view class="recommend-title">猜你喜欢</view>
 	<navigator wx:for="{{items}}" wx:key="id" class="recommand-car-item" url="/pages/detail/detail?type=recommendlist&id={{item.id}}">
         <view >
-            <image class="carImg" src="{{item.img}}" lazy="loaded"/>
+            <image class="carImg" src="{{item.images[0]}}" lazy="loaded"/>
         </view>
 		<view class="carRight">
             <view class="carContent">
                 <view class="carName">{{item.seriesName}}</view>
                 <view class="carModel">{{item.simpleModelName}}</view>
                 <view class="carInfo">
-                    <text class="carInfoText" decode="{{true}}">{{item.firstLicensePlateDate}}&nbsp;</text>
-                    <text class="carInfoText" decode="{{true}}">{{item.mileageWan}}公里&nbsp;</text>
+                    <text class="carInfoText" decode="{{true}}">{{util.timeFormat(item.firstLicensePlateDate)}}&nbsp;</text>
+                    <text class="carInfoText" decode="{{true}}">{{item.mileage}}公里&nbsp;</text>
                     <text class="carInfoText" decode="{{true}}">{{item.cityName}}&nbsp;</text>
                 </view>
 			<view class="sale-price-group">
 				<view class="sale-price" >
-                    <text decode="{{true}}">{{item.priceWan}}万&nbsp;&nbsp;</text>  
+                    <text decode="{{true}}">{{item.price}}万&nbsp;&nbsp;</text>  
                 </view>
 				<view class="guide-price">
-                    <text decode="{{true}}">{{item.guidePriceWan}}万</text>
+                    <text decode="{{true}}">{{item.newPriceTax}}万</text>
                 </view>
 			</view>
             </view>

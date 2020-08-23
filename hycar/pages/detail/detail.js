@@ -1,5 +1,6 @@
 // miniprogram/pages/detail/detail.js
 import{network} from "../../utils/network.js"
+const db = wx.cloud.database();
 
 Page({
 
@@ -17,25 +18,15 @@ Page({
     var that=this;
     var type=options.type;
     var id=options.id;
-    network.getCarDetailImages({
-      type:type,
-      id:id,
-      success:function(detailCarImgs){
-        that.setData({
-          detailCarImgs: detailCarImgs
-        })
-      }
-    });
 
-    network.getCarDetailTitle({
-      type:type,
-      id:id,
-      success:function(detailCarInfo){
-        that.setData({
-          detailCarInfo: detailCarInfo
-        })        
-      }
-    });    
+    db.collection("carlist").where({_id:id}).get().then(res => {     
+      const carList = res.data; 
+      const saveMoney=(carList[0].newPriceTax-carList[0].price).toFixed(2);
+      that.setData({
+        detailCar:JSON.parse(JSON.stringify(carList[0])),
+        saveMoney:saveMoney
+      });       
+    })      
   },
 
   onPhoneCallTap:function()

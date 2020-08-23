@@ -1,5 +1,5 @@
 // miniprogram/pages/buy/buy.js
-import{network} from "../../utils/network.js"
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -13,7 +13,7 @@ Page({
   carListEvent:function(e){
     var searchCarList = e.detail.carList
     this.setData({
-      searchCarList:searchCarList,
+      searchCarList:JSON.parse(JSON.stringify(searchCarList)),
     })   
   },
 
@@ -21,19 +21,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    network.getCarList({
-      "sortName":'smart',
-        "newCar":0,
-        "sortType":'',
-        "carBrand":'',
-        "carSeries":'',
-        "index":1,
-      success:function(carList){
-        that.setData({
-          searchCarList: carList
-        })
-      }
+    var that = this;   
+    db.collection("carlist").where({status:"7001"}).limit(10).get().then(res => {     
+      const carList = res.data;       
+      that.setData({
+        searchCarList:JSON.parse(JSON.stringify(carList))
+      });      
     })
   }
   

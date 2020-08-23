@@ -23,10 +23,31 @@ Page({
   onSubmitEvent:function(env)
   {
     const that = this;
-    const content = env.detail.value.content;
+    const seriesName = env.detail.value.seriesName;
+    const simpleModelName = env.detail.value.simpleModelName;    
+    const price = env.detail.value.price;
+    const newPriceTax = env.detail.value.newPriceTax;
+    const cityName = this.data.city;
+    const color = env.detail.value.color;
+    const engineSize = env.detail.value.engineSize;
+    const firstLicensePlateDate = env.detail.value.firstLicensePlateDate;
+    const mileage = env.detail.value.mileage;
+    const type = this.data.carType;
+    const carDescription = env.detail.value.carDescription;    
     const car ={
-      content:content
-    }
+      seriesName:seriesName,
+      simpleModelName:simpleModelName,      
+      price:price,
+      newPriceTax:newPriceTax,
+      cityName:cityName,
+      color:color,
+      engineSize:engineSize,
+      firstLicensePlateDate:firstLicensePlateDate,
+      mileage:mileage,
+      type:type,
+      carDescription:carDescription,
+      status:"status"
+    }    
     wx.showLoading({
       title:"正在上传...",
     })
@@ -41,12 +62,16 @@ Page({
            success:res=>{
              fileIDList.push(res.fileID)
              if(fileIDList.length == that.data.tempImages.length){
-              car.images = fileIDList;
+              car.images = fileIDList;              
               that.submitCar(car);        
              }
            }
          })
        })
+     }
+     else{
+      car.images = [];
+      that.submitCar(car);
      }
   },
 
@@ -61,6 +86,7 @@ Page({
   },
 
   submitCar:function(car){
+    console.log(car);
     wx.cloud.callFunction({
       name:"submitcar",
       data:car,
@@ -70,7 +96,9 @@ Page({
           wx.hideLoading();
           wx.showToast({
             title:'上传成功',
-          })
+          });
+          setTimeout(function(){wx.navigateBack({})},800)
+          
           }else{
             wx.showToast({
               title:res.result.errmsg,
