@@ -4,7 +4,7 @@
         <view class="filtrate-bar">
             <view class="filtrate-left">
                 <view class="filtrate-item {{currentTab==0?'on':''}}" data-current="0" bindtap="tabNav">
-                    热门车源
+                    {{tabitem1Title}}
                     <i></i>
                 </view>
                 <view class="filtrate-item {{currentTab==1?'on':''}}" data-current="1" bindtap="tabNav">

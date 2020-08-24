@@ -18,7 +18,7 @@ Page({
   onAddCarTap:function(env){
     if(app.is_login()){
       wx.navigateTo({
-        url:"../addcar/addcar"
+        url:"../addCars/addCars"
       })
     }else{
       wx.navigateTo({

@@ -1,5 +1,4 @@
 /* miniprogram/pages/buy/buy.wxss */
-@import "../templates/carListThin/carListThin.wxss";
 page{
   height:100%;
   overflow:hidden;

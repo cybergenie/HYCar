@@ -1,4 +1,3 @@
-import {globalUrls} from "urls.js"
 
 const network = {
   

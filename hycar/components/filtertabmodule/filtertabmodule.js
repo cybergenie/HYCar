@@ -17,6 +17,7 @@ Component({
     currentTab: -1,
     selectedCar: "0",
     isShow: true,
+    tabitem1Title:"热门车源"
   },
 
   /**
@@ -54,7 +55,8 @@ Component({
           db.collection("carlist").where({status:"7001"}).limit(10).get().then(res => {     
             const carList = res.data;       
             that.setData({
-              carList:carList
+              carList:carList,
+              tabitem1Title:"热门车源"
             });
             that.triggerEvent('carListEvent', { carList: carList })
           })        
@@ -63,7 +65,8 @@ Component({
         db.collection("carlist").orderBy('createTime', 'desc').limit(10).get().then(res => {     
           const carList = res.data;       
           that.setData({
-            carList:carList
+            carList:carList,
+            tabitem1Title:"最新上架"
           });
           that.triggerEvent('carListEvent', { carList: carList })
         }) 
@@ -72,7 +75,8 @@ Component({
         db.collection("carlist").orderBy('price', 'asc').limit(10).get().then(res => {     
           const carList = res.data;       
           that.setData({
-            carList:carList
+            carList:carList,
+            tabitem1Title:"价格最低"
           });
           that.triggerEvent('carListEvent', { carList: carList })
         }) 
@@ -81,7 +85,8 @@ Component({
         db.collection("carlist").orderBy('price', 'desc').limit(10).get().then(res => {     
           const carList = res.data;       
           that.setData({
-            carList:carList
+            carList:carList,
+            tabitem1Title:"价格最高"
           });
           that.triggerEvent('carListEvent', { carList: carList })
         }) 
@@ -90,7 +95,8 @@ Component({
         db.collection("carlist").orderBy('mileage', 'asc').limit(10).get().then(res => {     
           const carList = res.data;       
           that.setData({
-            carList:carList
+            carList:carList,
+            tabitem1Title:"里程最短"
           });
           that.triggerEvent('carListEvent', { carList: carList })
         }) 
@@ -99,7 +105,8 @@ Component({
         db.collection("carlist").orderBy('firstLicensePlateDate', 'desc').limit(10).get().then(res => {     
           const carList = res.data;       
           that.setData({
-            carList:carList
+            carList:carList,
+            tabitem1Title:"车龄最短"
           });
           that.triggerEvent('carListEvent', { carList: carList })
         })

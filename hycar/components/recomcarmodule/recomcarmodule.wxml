@@ -2,7 +2,7 @@
 <wxs src="../../utils/util.wxs" module="util" />
 <view class="recommand-car-container">
     <view class="recommend-title">猜你喜欢</view>
-	<navigator wx:for="{{items}}" wx:key="id" class="recommand-car-item" url="/pages/detail/detail?type=recommendlist&id={{item.id}}">
+	<navigator wx:for="{{items}}" wx:key="id" class="recommand-car-item" url="/pages/detail/detail?type=recommendlist&id={{item._id}}">
         <view >
             <image class="carImg" src="{{item.images[0]}}" lazy="loaded"/>
         </view>

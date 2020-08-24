@@ -148,8 +148,7 @@ Page({
    * 城市选择确认
    */
   cityPickerOnSureClick: function (e) {
-    console.log('cityPickerOnSureClick');
-    console.log(e);
+    console.log('cityPickerOnSureClick');    
     this.setData({
       city: e.detail.valueName[1],
       cityPickerValue: e.detail.valueCode,
@@ -202,5 +201,21 @@ Page({
       carTypePickerIsShow: true,
     });
   },
+
+  onCarPictureTap(){
+    const that = this;
+    const tempImages = that.data.tempImages;
+    wx.navigateTo({
+      url:"../addPictures/addPictures",
+      events: {
+        // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+        getTempImages: function(tempImages) {
+         console.log(tempImages);
+        },
+             
+      },
+    })
+    console.log(tempImages);
+  }
   
 })

@@ -28,7 +28,7 @@
         <view class="priceNofication">降价通知</view>
       </view>
     </view>
-    <view class="couponContainer">
+    <!-- <view class="couponContainer">
       <view class="couponLabel">领卷</view>
       <view class="couponContent">
         <view class="couponBox">
@@ -40,7 +40,7 @@
           <image src="./images/arrow_right.png" class="arrowRight" />
         </view>
       </view>
-    </view>
+    </view> -->
   </view>
   <view class="loanContainer">
     <view class="loanContent">
@@ -66,7 +66,7 @@
       <view class="contactInfo">
         <text decode="{{true}}">在售车82&nbsp;&nbsp;已售车2803&nbsp;&nbsp;浏览人数6535</text>
       </view>
-      <view class="connectContent">
+      <view class="contactContent">
         <view class="li-item-a" bind:tap="onLocationTap">
           <view class="address">长春经济技术开发区 临河街6373号</view>
           <image class="li-icon" src="./images/address.png" />

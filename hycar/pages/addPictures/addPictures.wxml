@@ -1,0 +1,12 @@
+<!-- hycar/pages/addPictures/addPictures.wxml -->
+<view class="image-group-container">
+  <view class="image-list-group">
+    <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+      <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
+      <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
+    </view>
+    <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+      <view>+</view>
+    </view>
+  </view>
+</view>

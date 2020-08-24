@@ -28,33 +28,7 @@ Page({
   onLoad: function (options) {
     var that=this;
     that.loadCarList();
-    that.loadRecommandList();
-    // network.getCarListByModule({
-    //   success:function(carList){
-    //     that.setData({
-    //       carList: carList
-    //     })
-    //   }
-    // }),
-    // network.getBrandList({
-    //   success:function(carBrands){
-    //     that.setData({
-    //       carBrands: carBrands
-    //     })
-    //   },
-    //   success:function(carHotBrands){
-    //     that.setData({
-    //       carHotBrands: carHotBrands
-    //     })
-    //   }
-    // }),
-    // network.getCarRecommand({
-    //   success:function(recommandCarList){
-    //     that.setData({
-    //       recommandCarList: recommandCarList
-    //     })
-    //   }
-    // })
+    that.loadRecommandList();   
   },
 //需要修改云开发数据库权限
   loadCarList:function(){
