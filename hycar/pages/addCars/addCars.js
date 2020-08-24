@@ -15,8 +15,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.initImageSize();
+  onLoad: function (options) {   
 
   },
 
@@ -75,16 +74,6 @@ Page({
      }
   },
 
-  onImageTap:function(env)
-  {
-    const that = this;
-    const index = env.target.dataset.index;
-    wx.previewImage({
-      urls:that.data.tempImages,
-      current:that.data.tempImages[index]
-    })
-  },
-
   submitCar:function(car){
     console.log(car);
     wx.cloud.callFunction({
@@ -109,41 +98,6 @@ Page({
     
   },
 
-
-  initImageSize:function(){
-    const windowWidth = wx.getSystemInfoSync().windowWidth;
-    const containerWidth = windowWidth-60;
-    const imageSize = (containerWidth-2.5*3)/3;
-    this.setData({
-      imageSize:imageSize
-    }) 
-  },
-
-  onAddImageTap:function(env){
-    const that = this;
-    wx.chooseImage({
-      success:function(res){
-        const tempImages = res.tempFilePaths; 
-        const oldImages = that.data.tempImages;
-        const newImages = oldImages.concat(tempImages);
-        that.setData({
-          tempImages:newImages
-        })
-
-      },
-    })
-  },
-
-  onRemoveBtnTap:function(env){
-    const index = env.target.dataset.index;
-    const tempImages = this.data.tempImages;
-    tempImages.splice(index,1);
-    this.setData({
-      tempImages:tempImages
-    })
-  },
-
-  
     /**
    * 城市选择确认
    */
@@ -202,20 +156,10 @@ Page({
     });
   },
 
-  onCarPictureTap(){
-    const that = this;
-    const tempImages = that.data.tempImages;
+  onCarPictureTap(){    
     wx.navigateTo({
-      url:"../addPictures/addPictures",
-      events: {
-        // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-        getTempImages: function(tempImages) {
-         console.log(tempImages);
-        },
-             
-      },
-    })
-    console.log(tempImages);
+      url:"../addPictures/addPictures", 
+    }) 
   }
   
 })

@@ -7,7 +7,7 @@
           车系名称
           <label style="color:red">*</label>
         </label>
-        <input name="seriesName" type="text" class="car-info-inut" placeholder='输入品牌/车型' placeholder-class="textholder"/>
+        <input name="seriesName" type="text" class="car-info-inut" placeholder='输入品牌/车型' placeholder-class="textholder" />
       </view>
       <view class="car-info">
         <label class="car-info-lb">
@@ -86,21 +86,17 @@
           <label style="color:red">*</label>
         </label>
         <view class="arrowBox">
-          <label name="carPictures" style="padding-right:20rpx">{{carPictures}}</label>
+          <view wx:if="{{carPictures>0}}">
+            <label name="carPictures" style="padding-right:20rpx">共添加{{carPictures}}张图片</label>
+          </view>
+          <view wx:else>
+            <label name="carPictures" style="padding-right:20rpx"></label>
+          </view>
           <image src="./images/arrow_right.png" class="arrowRight" />
         </view>
       </view>
     </view>
-    <view class="image-list-group">
-      <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-        <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
-        <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
-      </view>
-      <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-        <view>+</view>
-      </view>
-    </view>
-    <button form-type="submit" type="primary" class="submit-btn" style="width:100%;background-color: #e30000;height: 88rpx;font-size: 32rpx;">
+    <button form-type="submit" type="primary" class="submit-btn" style="width:100%;background-color: #e30000;height: 88rpx;font-size: 32rpx;text-align: center;">
       发布
     </button>
   </form>

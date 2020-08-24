@@ -1,6 +1,13 @@
-.image-group-container{
-    width: 100%;
-    padding: 24rpx,32rpx,0,32rpx;
+.container{
+  width: 750rpx;
+  padding:20rpx 20rpx ;
+}
+.container .image-list-group{  
+  padding-top: 20rpx;
+  display: flex;
+  justify-content:  flex-star;
+  flex-wrap: wrap;
+
 }
 .image-list-group .image-group{
     margin-right: 5rpx;

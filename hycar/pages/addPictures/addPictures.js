@@ -38,30 +38,34 @@ Page({
   onAddImageTap:function(env){
     const that = this;
     wx.chooseImage({
-      success:function(res){
-        const eventChannel = that.getOpenerEventChannel();
+      success:function(res){        
         const tempImages = res.tempFilePaths; 
         const oldImages = that.data.tempImages;
         const newImages = oldImages.concat(tempImages);
         that.setData({
           tempImages:newImages
-        });
-        eventChannel.emit('getTempImages', {tempImages: tempImages});
-
-
+        });      
       },
     })
   },
 
-  onRemoveBtnTap:function(env){
-    const eventChannel = this.getOpenerEventChannel();
+  onRemoveBtnTap:function(env){    
     const index = env.target.dataset.index;
     const tempImages = this.data.tempImages;
     tempImages.splice(index,1);
     this.setData({
       tempImages:tempImages
-    });
-    eventChannel.emit('getTempImages', {tempImages: tempImages});
-  }
+    });    
+  },
+
+  onUnload: function (env) {    
+    const tempImages = this.data.tempImages;
+    var pages = getCurrentPages();
+    var prevPage = pages[pages.length - 2];
+    prevPage.setData({
+      tempImages: tempImages,
+      carPictures: tempImages.length
+    });   
+  },
 
 })
