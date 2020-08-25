@@ -1,0 +1,11 @@
+<!--hycar/pages/addDescription/addDescription.wxml-->
+<view class="container">
+  <view class="descriptionContainer"> 
+     <view class="descriptionTitle">添加车辆描述</view>
+    <view class="descriptionText">
+      <textarea name="textContent" bind:input="inuTap" class="textarea" placeholder="请输入车辆的细节描述，例如特色的功能，需要注意的事项等补充信息"></textarea>
+
+    </view>
+  </view>
+  <view class="submitDescription" bindtap="onSubmitDescription">添加描述</view>
+</view>

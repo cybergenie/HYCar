@@ -1,21 +1,30 @@
 <!-- hycar/pages/addPictures/addPictures.wxml -->
 <view class="container">
-  <view class="image-list-group">
-    <view class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-      <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
-      <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
-    </view> 
-    <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-      <view>+</view>
-    </view>   
-  </view>
-  <view class="image-list-group">
-    <view wx:for="{{tempImages}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-      <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
-      <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}"></view>
-    </view>
-    <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
-      <view>+</view>
+  <view class="ImageContainer">
+    <view class="descriptionTitle">添加展示图片</view>
+    <view class="image-list-group">
+      <view wx:if="{{tempImages[0].length > 0}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+        <image src="{{tempImages[0]}}" bind:tap="onImageTap" data-index="0" />
+        <view class="close-btn" bind:tap="onRemoveTitleBtnTap" data-index="0"></view>
+      </view>
+      <view wx:else class="add-image-btn" bind:tap="onAddTitleImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+        <view>+</view>
+      </view>
     </view>
   </view>
+  <view class="ImageContainer">
+    <view class="descriptionTitle">添加细节图片</view>
+    <view class="image-list-group">
+      <view wx:for="{{tempImages}}">
+        <view wx:if="{{ index >= 1}}" class="image-group" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+          <image src="{{item}}" bind:tap="onImageTap" data-index="{{index}}" />
+          <view class="close-btn" bind:tap="onRemoveBtnTap" data-index="{{index}}" />
+        </view>
+      </view>
+      <view class="add-image-btn" bind:tap="onAddImageTap" style="width:{{imageSize}}px;height:{{imageSize}}px;">
+        <view>+</view>
+      </view>
+    </view>
+  </view>
+  <view class="submitImage" bindtap="onSubmitImage">添加图片></view>
 </view>

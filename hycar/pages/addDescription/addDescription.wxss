@@ -1,0 +1,43 @@
+/* hycar/pages/addDescription/addDescription.wxss */
+page{
+    background-color: #f2f2f2;
+  }
+  
+  .container{
+    margin-top: 30rpx;
+  }
+  
+  .descriptionContainer{
+    margin-top: 24rpx;
+    padding: 0 20rpx;
+    background-color: #fff;
+  }
+
+  .descriptionTitle{
+    padding: 20rpx 0;
+    width: 100%;
+    font-size: 28rpx;
+    display: inline-block;
+    line-height: 36rpx;
+    margin-right: 32rpx;
+    word-break: break-all;
+    border-bottom: 2rpx solid #e6e6e6;
+  }
+
+  .textContent{
+    font-size: 28rpx;
+    width: 100%;
+    height: 200rpx;
+    /* background: red; */
+  }
+
+  .submitDescription{ 
+    background-color: #e30000;
+    margin: 32rpx;
+    box-sizing: border-box;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: #fff;
+  }

@@ -6,7 +6,8 @@
     "pages/detail/detail",
     "pages/login/login",
     "pages/addCars/addCars",
-    "pages/addPictures/addPictures"
+    "pages/addPictures/addPictures",
+    "pages/addDescription/addDescription"
   ],
   "window": {
     "navigationStyle": "default",

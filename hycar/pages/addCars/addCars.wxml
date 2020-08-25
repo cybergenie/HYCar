@@ -16,13 +16,13 @@
         </label>
         <input name="simpleModelName" type="text" class="car-info-inut" />
       </view>
-      <view class="car-info">
+      <!-- <view class="car-info">
         <label class="car-info-lb">
           名称
           <label style="color:red">*</label>
         </label>
         <input name="modelName" type="text" class="car-info-inut" />
-      </view>
+      </view> -->
       <view class="car-info">
         <label class="car-info-lb">
           价格
@@ -76,7 +76,12 @@
           <label style="color:red">*</label>
         </label>
         <view class="arrowBox">
-          <label name="carDescription" style="padding-right:20rpx">{{carDescription}}</label>
+          <view wx:if="{{descriptionCount>0}}">
+          <label name="carDescription" style="padding-right:20rpx">共添加{{descriptionCount}}个文字描述</label>
+          </view>
+          <view wx:else>
+            <label name="carDescription" style="padding-right:20rpx"></label>
+            </view>
           <image src="./images/arrow_right.png" class="arrowRight" />
         </view>
       </view>

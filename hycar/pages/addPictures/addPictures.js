@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tempImages:[]
+    tempImages:[""]
   },
 
   /**
@@ -35,6 +35,22 @@ Page({
     })
   },
 
+  onAddTitleImageTap:function(env){
+    const that = this;
+    wx.chooseImage({
+      success:function(res){        
+        const tempImages = res.tempFilePaths; 
+        const oldImages = that.data.tempImages;
+        oldImages.shift();
+        oldImages.unshift(tempImages[0]);
+        const newImages = oldImages;
+        that.setData({
+          tempImages:newImages
+        }); 
+      },
+    });    
+  },
+
   onAddImageTap:function(env){
     const that = this;
     wx.chooseImage({
@@ -44,10 +60,20 @@ Page({
         const newImages = oldImages.concat(tempImages);
         that.setData({
           tempImages:newImages
-        });      
+        });             
       },
-    })
+    });   
   },
+
+  onRemoveTitleBtnTap:function(env){        
+    const tempImages = this.data.tempImages;
+    tempImages.shift();
+    tempImages.unshift("");    
+    this.setData({
+      tempImages:tempImages
+    });     
+  },
+
 
   onRemoveBtnTap:function(env){    
     const index = env.target.dataset.index;
@@ -55,17 +81,22 @@ Page({
     tempImages.splice(index,1);
     this.setData({
       tempImages:tempImages
-    });    
+    });     
   },
 
-  onUnload: function (env) {    
+  onSubmitImage: function (env) {    
     const tempImages = this.data.tempImages;
+    if(tempImages[0]=="")
+    {
+      tempImages.shift();
+    }
     var pages = getCurrentPages();
     var prevPage = pages[pages.length - 2];
     prevPage.setData({
       tempImages: tempImages,
       carPictures: tempImages.length
-    });   
+    });  
+    wx.navigateBack() 
   },
 
 })

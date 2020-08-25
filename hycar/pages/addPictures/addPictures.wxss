@@ -1,9 +1,30 @@
-.container{
-  width: 750rpx;
-  padding:20rpx 20rpx ;
+page{
+  background-color: #f2f2f2;
 }
-.container .image-list-group{  
-  padding-top: 20rpx;
+
+.container{
+  margin-top: 30rpx;
+}
+
+.ImageContainer{
+  margin-top: 24rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.descriptionTitle{
+  padding: 20rpx 0;
+  width: 100%;
+  font-size: 28rpx;
+  display: inline-block;
+  line-height: 36rpx;
+  margin-right: 32rpx;
+  word-break: break-all;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+
+.image-list-group{  
+  padding: 20rpx 0;
   display: flex;
   justify-content:  flex-star;
   flex-wrap: wrap;
@@ -40,4 +61,14 @@
   }
   .image-list-group .add-image-btn view{
     margin-top: -20rpx;
+  }
+  .submitImage{ 
+    background-color: #e30000;
+    margin: 32rpx;
+    box-sizing: border-box;
+    height: 88rpx;
+    line-height: 88rpx;
+    font-size: 32rpx;
+    text-align: center;
+    color: #fff;
   }

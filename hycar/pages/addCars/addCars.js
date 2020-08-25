@@ -32,7 +32,7 @@ Page({
     const firstLicensePlateDate = env.detail.value.firstLicensePlateDate;
     const mileage = env.detail.value.mileage;
     const type = this.data.carType;
-    const carDescription = env.detail.value.carDescription;    
+    
     const car ={
       seriesName:seriesName,
       simpleModelName:simpleModelName,      
@@ -50,6 +50,15 @@ Page({
     wx.showLoading({
       title:"正在上传...",
     })
+    
+    const carDescription = ""; 
+    if(that.data.tempDescription.length>0){
+      car.carDescription = that.data.tempDescription;
+    }
+    else{
+      car.carDescription = "";
+    }
+
      //上传图片到云服务器
      const fileIDList = [];
      if(that.data.tempImages.length > 0){
@@ -159,6 +168,12 @@ Page({
   onCarPictureTap(){    
     wx.navigateTo({
       url:"../addPictures/addPictures", 
+    }) 
+  },
+
+  onDescriptionTap(){
+    wx.navigateTo({
+      url:"../addDescription/addDescription", 
     }) 
   }
   
