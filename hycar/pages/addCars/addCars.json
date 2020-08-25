@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "city-picker": "../../components/city-picker/city-picker",
-    "cartype-picker": "../../components/cartype-picker/cartype-picker"
+    "cartype-picker": "../../components/cartype-picker/cartype-picker",
+    "date-picker": "../../components/date-picker/date-picker"
   }
 }

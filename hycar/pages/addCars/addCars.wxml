@@ -28,14 +28,14 @@
           价格
           <label style="color:red">*</label>
         </label>
-        <input name="price" type="text" class="car-info-inut" />
+        <input name="price" type="text" class="car-info-inut" placeholder='**万元' placeholder-class="textholder" />
       </view>
       <view class="car-info">
         <label class="car-info-lb">
           新车价格
           <label style="color:red">*</label>
         </label>
-        <input name="newPriceTax" type="text" class="car-info-inut" />
+        <input name="newPriceTax" type="text" class="car-info-inut" placeholder='**万元' placeholder-class="textholder" />
       </view>
       <view class="car-info" bindtap="showCityPicker">
         <label class="car-info-lb">城市</label>
@@ -50,15 +50,18 @@
       </view>
       <view class="car-info">
         <label class="car-info-lb">排量</label>
-        <input name="engineSize" type="text" class="car-info-inut" />
+        <input name="engineSize" type="text" class="car-info-inut" placeholder='发动机排量，例如1.4T,1.6L' placeholder-class="textholder" />
       </view>
-      <view class="car-info">
+      <view class="car-info" bindtap="showDatePicker">
         <label class="car-info-lb">上牌时间</label>
-        <input name="firstLicensePlateDate" type="text" class="car-info-inut" />
+        <view class="arrowBox">          
+          <label name="firstLicensePlateDate" style="padding-right:20rpx" >{{date}}</label>          
+          <image src="./images/arrow_right.png" class="arrowRight" />
+        </view>
       </view>
       <view class="car-info">
         <label class="car-info-lb">行驶里程</label>
-        <input name="mileage" type="text" class="car-info-inut" />
+        <input name="mileage" type="text" class="car-info-inut" placeholder='**万公里' placeholder-class="textholder" />
       </view>
       <view class="car-info" bindtap="showCarTypePicker">
         <label class="car-info-lb">
@@ -107,4 +110,10 @@
   </form>
   <city-picker id="city-picker" value="{{cityPickerValue}}" isShow="{{cityPickerIsShow}}" bindsureclick="cityPickerOnSureClick" bindcancelclick="cityPickerOnCancelClick" />
   <cartype-picker id="cartype-picker" value="{{carTypePickerValue}}" isShow="{{carTypePickerIsShow}}" bindsureclick="carTypePickerOnSureClick" bindcancelclick="carTypePickerOnCancelClick" />
+  <date-picker
+    id="date-picker"
+    value="{{datePickerValue}}" 
+    isShow="{{datePickerIsShow}}"
+    bindsureclick="datePickerOnSureClick"
+    bindcancelclick="datePickerOnCancelClick" />
 </view>

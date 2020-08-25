@@ -8,7 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tempImages:[]
+    city:'长春市',
+    tempDescription:'',
+    tempImages:[],
+    date:'',
+    datePickerValue: ['', '', ''],
+    datePickerIsShow: false
 
   },
 
@@ -29,7 +34,7 @@ Page({
     const cityName = this.data.city;
     const color = env.detail.value.color;
     const engineSize = env.detail.value.engineSize;
-    const firstLicensePlateDate = env.detail.value.firstLicensePlateDate;
+    const firstLicensePlateDate = this.data.firstLicensePlateDate;
     const mileage = env.detail.value.mileage;
     const type = this.data.carType;
     
@@ -63,12 +68,13 @@ Page({
      const fileIDList = [];
      if(that.data.tempImages.length > 0){
        that.data.tempImages.forEach((value,index)=>{
+         console.log(value,index);
          const cloudPath = "carimglist/test/"+getUUID()+"."+getExt(value);         
          wx.cloud.uploadFile({
            filePath:value,
            cloudPath:cloudPath,
            success:res=>{
-             fileIDList.push(res.fileID)
+             fileIDList.unshift(res.fileID)
              if(fileIDList.length == that.data.tempImages.length){
               car.images = fileIDList;              
               that.submitCar(car);        
@@ -162,6 +168,36 @@ Page({
     // this.data.cityPicker.show()
     this.setData({
       carTypePickerIsShow: true,
+    });
+  },
+
+  showDatePicker: function (e) {
+    // this.data.datePicker.show(this);
+    this.setData({
+      datePickerIsShow: true,
+    });
+  },
+
+  datePickerOnSureClick: function (e) {
+    console.log('datePickerOnSureClick');
+    console.log(e);
+    const tempDate = new Date();
+    tempDate.setFullYear(e.detail.value[0]);
+    tempDate.setMonth(e.detail.value[1]);
+    tempDate.setDate(e.detail.value[2]);    
+    this.setData({
+      date: `${e.detail.value[0]}年${e.detail.value[1]}月${e.detail.value[2]}日`,
+      datePickerValue: e.detail.value,
+      datePickerIsShow: false,
+      firstLicensePlateDate:tempDate
+    });
+  },
+
+  datePickerOnCancelClick: function (event) {
+    console.log('datePickerOnCancelClick');
+    console.log(event);
+    this.setData({
+      datePickerIsShow: false,
     });
   },
 
